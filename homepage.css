@@ -30,14 +30,12 @@ body {
     padding: 20px;
     margin: 50px auto 0px auto;
     width: 100%;
-    font-size: 1.5em;
+    font-size: 1em;
     color: #ffffff;
   }
 
   .heroimage {
-    max-width: 100%;
-    width: auto;
-    max-height: 435px;
+    width: 100%;
   }
 
   .characterIcon, .movieIcon {
