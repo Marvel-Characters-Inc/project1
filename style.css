@@ -1,0 +1,40 @@
+* {
+    box-sizing: border-box;
+  }
+  
+body {
+    background-color: #EC1D24;
+    display: block;
+    justify-content: center;
+    text-align: center;
+    margin: 0;
+    padding-left: 10%;
+    padding-right: 10%;
+    font-family: 'Times', sans-serif;
+    color: #000000;
+    line-height: 1.5;
+    font-size: 16px;
+  }
+
+section {
+ background-color: #FFFFFF;
+}   
+
+footer {
+font-size: 12px;
+}
+  
+.title {
+    background-color: #FFFFFF;
+
+  }
+
+
+.hero-image {
+
+}
+
+.hero-info {
+    display: inline;
+
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"/>
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1 class="title">Marvel Character Movie Finder</h1>
+    </header>
+   
+    <section>
+        <h2 class="character-info">Character Information</h2>
+        <img id="hero-image" class="character-pic"></img>
+        <div class="hero-info">
+            <h3 id="hero-name">Hero Name</h3>
+            <p id="real-name">Real Name</p>
+            <p id="city">City</p>
+        </div>
+    </section>
+       
+    <section>
+        <h2 class="character-movies">Movies Character Appears In: </h2>
+        <div id="movie-results">
+            <card class="movies">
+                <div id="modal-js-example" class="modal">
+                    <div class="modal-background"></div>
+                  
+                    <div class="modal-content">
+                      <div class="box">
+                        <p>Modal JS example</p>
+                        <!-- Your content -->
+                      </div>
+                    </div>
+                  
+                    <button class="modal-close is-large" aria-label="close"></button>
+                  </div>
+            </card>
+            <card class="movies"></card>
+            <card class="movies"></card>
+        </div>
+        <div>
+            <button id="new-character-button">Different Character</button>
+        </div>
+    </section>
+
+    <footer>
+        <p class="footer">We are professionals:]</p>
+    </footer>
+
+</body>
+</html>
