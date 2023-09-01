@@ -1,15 +1,28 @@
 * {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 15px;
+    font-family: 'Marvel', sans-serif;
     line-height: 24px;
+    font-size: 30px;
 }
 
 body {
     background-color: #EC1D24;
   }
+
+  h1 {
+    font-family: 'Marvel', sans-serif;
+    color: #ffffff;
+    line-height: 3em;
+  }
   
   header {
     width: 100%;
+  }
+
+.section {
+    min-height: 300px;
+    width: 100%;
+    padding: 3em;
+    margin: 3em auto;
   }
   
   footer {
@@ -23,7 +36,8 @@ body {
 
   .heroimage {
     max-width: 100%;
-    width: 100%;
+    width: auto;
+    max-height: 435px;
   }
 
   .characterIcon, .movieIcon {
@@ -33,6 +47,12 @@ body {
     display: inline;
   }
 
+  #themesBox, #movieBox {
+    align-items: center;
+    width: 100%;
+  }
+
+  /* styles for Modal */
   .MovieBannerImage {
     padding: 3em;
     width: 30%;
@@ -43,140 +63,6 @@ body {
     padding: 3em;
     width: 30%;
     display: inline;
-  }
-
-  #themesBox, #movieBox {
-    align-items: center;
-    width: 100%;
-    padding: 3em;
-  }
-
-  #projects img {
-    max-width: 20%;
-    padding: 1em;
-    display: inline-block;
-  }
-  
-  .container {
-    margin: 30px;
-    display: block;
-}
-
-
-.caption {
-    font-weight: bold;
-    font-size: 15px;
-    background-color: #ccc;
-    padding: 15px;
-    width: 100%;
-}
-
-.site-logo {
-    width: 30%;
-    padding: 0px;
-    margin: 0px auto;
-}
-
-.center {
-    margin: 0 auto;
-  }
-  
-  .source {
-    font-size: 14px;
-    font-style: italic;
-    color: #4f7942;
-}
-
-p {
-    font-size: 15px;
-    width: 80%;
-}
-
-  h1 {
-    font-size: 35px;
-    font-weight: 200;
-    text-transform: uppercase;
-    color: #ffffff;
-  }
-
-  h2 {
-    font-size: 25px;
-    font-weight: 200;
-    line-height: 50px;
-  }
-  
-  img {
-    width: 100%;
-    padding: 0px;
-    margin: 0px;
-    display: block;
-}
-
-a {
-    color: #4f7942;
-    text-decoration: underline;
-}
-
-  /* Navigation Styles */
-  
-  nav {
-    width: 100%;
-    padding: 10px;
-    display: block;
-  }
-  
-  nav ul {
-    display: block;
-    padding: 0px 0px;
-    margin: 0px 0px;
-}
-
-nav ul li {
-    display: inline-block;
-    background-color: #738678;
-    padding: 10px;
-    margin: 10px;
-    color: #ffffff;
-    text-transform: uppercase;
-  }
-
-  nav li a {
-    display: inline;
-    color: #ffffff;
-    text-decoration: none;
-  }
-
-  nav li a:hover {
-    color: #000000;
-  }
-
-  /* Form Styles */
-form {
-    width: 100%;
-  }
-
-  label {
-    line-height: 20px;
-}
-
-  input {
-    width: 250px;
-  }
-
-input[type=button], input[type=submit], input[type=reset] {
-    background-color: #04AA6D;
-    border: none;
-    color: white;
-    padding: 16px 32px;
-    text-decoration: none;
-    margin: 4px 2px;
-    cursor: pointer;
-  }
-
-  #profilephoto img {
-    max-width: 25%;
-    float: right;
-    padding: 1em 5em;
   }
 
   /* The Modal (background) */
@@ -227,15 +113,4 @@ input[type=button], input[type=submit], input[type=reset] {
     line-height: 24px;
 }
 
-  main {
-    margin-top: 3em;
-  }
-
-  p {
-    font-size: 15px;
-  }
-
- #heroimage {
-    display: none;
-  }
 }
