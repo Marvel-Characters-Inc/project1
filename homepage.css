@@ -5,17 +5,10 @@
 }
 
 body {
-    width: 100%;
-    height: auto;
-    margin: 0;
-    padding: 0;
     background-color: #EC1D24;
   }
   
   header {
-    background-color: #EC1D24;
-    padding: 20px;
-    text-align: center;
     width: 100%;
   }
   
@@ -24,28 +17,13 @@ body {
     padding: 20px;
     margin: 50px auto 0px auto;
     width: 100%;
-    font-size: 1em;
+    font-size: 1.5em;
     color: #ffffff;
-  }
-
-  hr {
-    margin: 2em auto;
-    width: 95%;
-  }
-
-  #heroimage {
-    text-align: center;
-    max-width: 100%;
-    width: 100%;
-    margin: 0px 0px !important;
-    padding: 0px 0px !important;
   }
 
   .heroimage {
     max-width: 100%;
     width: 100%;
-    margin: 0px 0px !important;
-    padding: 0px 0px !important;
   }
 
   .characterIcon, .movieIcon {
