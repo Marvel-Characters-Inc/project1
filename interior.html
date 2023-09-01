@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@materializecss/materialize@2.0.2-alpha/dist/css/materialize.min.css">
     <link rel="stylesheet" href="./style.css" />
-   
+    
     <title>Document</title>
 </head>
 <body>
     <header>
-        <h1 class="title">Marvel Character Movie Finder</h1>
+        <h1 class="title">Marvel Characters, Inc.</h1>
     </header>
    
     <section>
@@ -26,21 +27,51 @@
         <h2 class="character-movies">Movies Character Appears In: </h2>
         <div id="movie-results">
             <card class="movies">
-                <div id="modal-js-example" class="modal">
-                    <div class="modal-background"></div>
-                  
+                <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Read More</a>
+
+                <div id="modal1" class="modal">
                     <div class="modal-content">
-                      <div class="box">
-                        <p>Modal JS example</p>
-                        <!-- Your content -->
-                      </div>
+                        <h4>Movie Title</h4>
+                        <img>
+                        <p>Release Date</p>
+                        <p>Synopsis</p>
                     </div>
-                  
-                    <button class="modal-close is-large" aria-label="close">Read More... </button>
-                  </div>
+                    <div class="modal-footer">
+                     <a href="#!" class="modal-close waves-effect btn-flat">Agree</a>
+                    </div>
+                </div>
+            
             </card>
-            <card class="movies"></card>
-            <card class="movies"></card>
+            <card class="movies">
+                    <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Read More</a>
+                
+                <div id="modal1" class="modal">
+                    <div class="modal-content">
+                        <h4>Movie Title</h4>
+                        <img>
+                        <p>Release Date</p>
+                        <p>Synopsis</p>
+                    </div>
+                    <div class="modal-footer">
+                     <a href="#!" class="modal-close waves-effect btn-flat">Agree</a>
+                    </div>
+                </div>
+            </card>
+            <card class="movies">
+                <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Read More</a>
+                
+                <div id="modal1" class="modal">
+                    <div class="modal-content">
+                        <h4>Movie Title</h4>
+                        <img>
+                        <p>Release Date</p>
+                        <p>Synopsis</p>
+                    </div>
+                    <div class="modal-footer">
+                     <a href="#!" class="modal-close waves-effect btn-flat">Agree</a>
+                    </div>
+                </div>
+            </card>
         </div>
         <div>
             <button id="new-character-button">Different Character</button>
@@ -51,5 +82,8 @@
         <p class="footer">We are professionals:]</p>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/@materializecss/materialize@2.0.2-alpha/dist/js/materialize.min.js"></script>
+    <script src="./script.js"></script>
 </body>
+
 </html>
