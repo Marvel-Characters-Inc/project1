@@ -51,11 +51,13 @@ footer {
 #hero-image {
   max-width: 100%;
   max-height: 100%;
+  padding: 5%;
 }
 
 .hero-info {
     display: inline;
     font-size: 36px;
+    padding: 5%;
 }
 
 .diff-button{
