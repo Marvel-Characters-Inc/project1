@@ -5,30 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@materializecss/materialize@2.0.2-alpha/dist/css/materialize.min.css">
     <link rel="stylesheet" href="./style.css" />
-    
+
     <title>Document</title>
 </head>
+
 <body>
     <header>
         <h1 class="title">Marvel Characters, Inc.</h1>
     </header>
    
-    <section>
+    <section class="first">
         <h2 class="character-info">Character Information</h2>
-        <img id="hero-image" class="character-pic"></img>
-        <div class="hero-info">
-            <h3 id="hero-name">Hero Name</h3>
-            <p id="real-name">Real Name</p>
-            <p id="city">City</p>
-        </div>
+        <div class="info-card row">
+            <img id="hero-image" class="character-pic col s5" src="Portrait.png"></img>
+            <div class="hero-info col s7">
+                <h3 id="hero-name">Hero Name</h3>
+                <p id="real-name">Real Name</p>
+                <p id="city">City</p>
+            </div>
+        </div> 
     </section>
        
-    <section>
+    <section class="second">
         <h2 class="character-movies">Movies Character Appears In: </h2>
-        <div id="movie-results">
-            <card class="movies">
+        <div class="row" id="movie-results">
+            <card class="movies col s4">
                 <a class="waves-effect waves-light #b71c1c red darken-4 btn modal-trigger" href="#modal1">Read More...</a>
-
                 <div id="modal1" class="modal">
                     <div class="modal-content">
                         <h4>Movie Title</h4>
@@ -40,9 +42,8 @@
                      <a href="#!" class="modal-close waves-effect btn-flat">Close</a>
                     </div>
                 </div>
-            
             </card>
-            <card class="movies">
+            <card class="movies col s4">
                     <a class="waves-effect waves-light #b71c1c red darken-4 btn modal-trigger" href="#modal1">Read More...</a>
                 
                 <div id="modal1" class="modal">
@@ -57,7 +58,7 @@
                     </div>
                 </div>
             </card>
-            <card class="movies">
+            <card class="movies col s4">
                 <a class="waves-effect waves-light #b71c1c red darken-4 btn modal-trigger" href="#modal1">Read More...</a>
                 
                 <div id="modal1" class="modal">
@@ -73,7 +74,7 @@
                 </div>
             </card>
         </div>
-        <div>
+        <div class="diff-button">
             <button id="new-character-button">Different Character</button>
         </div>
     </section>
