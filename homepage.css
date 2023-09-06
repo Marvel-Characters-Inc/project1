@@ -76,14 +76,12 @@ justify-content: space-around;
 }
 #title {
   align-items: flex-start;
-  border-style: dotted;
 }
 
 #themeOption {
   margin: 10px;
 }
 #theme {
-  border-style: dotted; 
   color: white;
   font-size: 40px;
   display: flex;
