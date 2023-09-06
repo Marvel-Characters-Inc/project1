@@ -50,6 +50,7 @@ footer {
   width: 100%;
 }
 
+
 .themeButton {
   justify-content: center;
   display: block;
@@ -76,7 +77,7 @@ footer {
 
 
 #theme {
-  border-style: dotted; 
+  
   color: white;
   font-size: 40px;
   display: flex;
@@ -106,15 +107,14 @@ justify-content: space-around;
 }
 
 #themeOption {
-margin: 20px;
+  margin: 20px;
 }
 #theme {
-border-style: dotted; 
-color: white;
-font-size: 40px;
-display: flex;
-justify-content: center;
-margin: 20px 0px 0px;
+  color: white;
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  margin: 20px 0px 0px;
 
 }
 
