@@ -45,7 +45,6 @@ footer {
   display: inline;
 }
 
-<<<<<<< HEAD
 #themesBox, #movieBox {
   align-items: center;
   width: 100%;
@@ -55,7 +54,6 @@ footer {
   justify-content: center;
   display: block;
   align-items: center;
-=======
   .themeButton {
     justify-content: center;
     display: block;
@@ -96,7 +94,6 @@ footer {
   margin: 20px 0px 0px;
 
 }
->>>>>>> 4be19630345bb1dcbfcb36786f5782478808fa49
 
 }
 /* styles for Modal */
