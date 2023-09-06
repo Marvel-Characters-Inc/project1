@@ -1,13 +1,100 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link>
+    <title>Marvel Characters, Inc.</title>
+    <link rel="stylesheet" type="text/css" href="homepage.css">
+
+ 
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@materializecss/materialize@2.0.2-alpha/dist/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/@materializecss/materialize@2.0.2-alpha/dist/js/materialize.min.js"></script>
+            
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marvel:wght@400;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    
-    <script src="./index.js"></script>
+    <header>
+
+        <!-- <h1>Marvel Characters, Inc.</h1> 
+        Placeholder Image https://placehold.co/1800x435 -->
+
+        <!-- hero image -->
+        <img src="sample-hero-image.jpg" alt="Marvel Hero Image" title="Marvel Hero Image" class="heroimage" />
+
+        <!-- Option 2 
+        <img src="Banner-Sample-1800x435.jpg" alt="Marvel Hero Image" title="Marvel Cinematic Universe" class="heroimage" /> -->
+
+    </header>
+
+    <main>
+        <section class="hero-options">
+            <h2 id="theme">Choose Your Theme: </h2>
+            <div id="themeButton">
+                <div id="themeOption">
+                    <button class="button" style="height:400px;width:225px"> 
+                        <p >OG Avengers</p>
+                        <img src="./assets/avengersCrop.jpg"></img>
+                    </button>
+                </div>
+                <div id="themeOption">
+                    <button class="button" style="height:400px;width:225px"> 
+                        <p >Villians</p>
+                        <img src="./assets/villianCrop.jpg"></img>
+                    </button>
+                </div>
+                <div id="themeOption">
+                    <button class="button" style="height:400px;width:225px"> 
+                        <p >Sheroes</p>
+                        <img src="./assets/sheroesCrop.jpg" width="200" height="290"></img>
+                    </button>
+                </div>
+                <div id="themeOption">
+                    <button class="button" style="height:400px;width:225px"> 
+                        <p >Heroes</p>
+                        <img src="./assets/hereosCrop.jpg" width="200" height="290"></img>
+                    </button>
+                </div>
+            </section>
+
+        <section class="section">
+            <div class="container">
+
+                    <!-- movies container -->
+                    <div class="row" id="charactersBox">
+                        <!-- display characters data here -->
+                      </div>
+
+    <!-- Movie Modal 
+    <div id="movieModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <img src="https://placehold.co/1000x1000" alt="Placeholder Image for Movie 1" title="Placeholder Image for Movie 1" class="MovieBannerImage">
+            <div class="MovieInfoBox">
+            <h2>Character Name Goes Here</h2>
+            <h3>Character Data Display Here</h3>
+            <p>Movie Data Goes Here...</p>
+            </div>
+        </div>
+      </div>-->
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer>© Copyright 2023</footer>
+
+    <script src="homepage.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
 </body>
+
 </html>
