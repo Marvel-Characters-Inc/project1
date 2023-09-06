@@ -50,12 +50,6 @@ footer {
   width: 100%;
 }
 
-p {
-  border-style: dotted;
-}
-img {
-  border-style: dotted;
-}
 .themeButton {
   justify-content: center;
   display: block;
