@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@materializecss/materialize@2.0.2-alpha/dist/css/materialize.min.css">
+    <link rel="stylesheet" href="./interior-style.css" />
+
+    <title>Character Information</title>
+</head>
+
+<body>
+    <header>
+        <h1 class="title">Marvel Characters, Inc.</h1>
+    </header>
+   <!-- Character Info -->
+    <section class="first">
+        <h2 class="character-info">Character Information</h2>
+        <div class="info-card row">
+            <img id="hero-image" class="character-pic col s5" src="Portrait.png"></img>
+            <div class="hero-info col s7">
+                <h3 id="hero-name">Hero Name</h3>
+                <p id="real-name">Real Name</p>
+                <p id="city">City</p>
+            </div>
+        </div> 
+    </section>
+       
+    <section class="second">
+        <h2 class="character-movies">Movies Character Appears In: </h2>
+        <div class="row" id="movie-results">
+            <!-- First Movie -->
+            <card class="movies col s4">
+                <img class="movie-image" src="Portrait.png">
+                <h6>Movie Title</h6>
+                <a class="waves-effect waves-light #b71c1c red darken-4 btn modal-trigger" href="#modal1">Read More...</a>
+                <div id="modal1" class="modal">
+                    <div class="modal-content">
+                        <h4 class="movie-title-one">Movie Title</h4>
+                        <img class ="char-img-one">
+                        <p class="release-date-one">Release Date</p>
+                        <p class ="synopsis-one">Synopsis</p>
+                    </div>
+                    <div class="modal-footer">
+                     <a href="#!" class="modal-close waves-effect btn-flat">Close</a>
+                    </div>
+                </div>
+            </card>
+            <!-- Second Movie -->
+            <card class="movies col s4">
+                <img class="movie-image" src="Portrait.png">
+                <h6>Movie Title</h6>
+                <a class="waves-effect waves-light #b71c1c red darken-4 btn modal-trigger" href="#modal1">Read More...</a>
+                <div id="modal1" class="modal">
+                    <div class="modal-content">
+                        <h4 class="movie-title-two">Movie Title</h4>
+                        <img class ="char-img-two">
+                        <p class="release-date-two">Release Date</p>
+                        <p class ="synopsis-two">Synopsis</p>
+                    </div>
+                    <div class="modal-footer">
+                     <a href="#!" class="modal-close waves-effect btn-flat">Close</a>
+                    </div>
+                </div>
+            </card>
+            <!-- Third Movie -->
+            <card class="movies col s4">
+                <img class="movie-image" src="Portrait.png">
+                <h6>Movie Title</h6>
+                <a class="waves-effect waves-light #b71c1c red darken-4 btn modal-trigger" href="#modal1">Read More...</a>
+                <div id="modal1" class="modal">
+                    <div class="modal-content">
+                        <h4 class="movie-title-three">Movie Title</h4>
+                        <img class ="char-img-three">
+                        <p class="release-date-three">Release Date</p>
+                        <p class ="synopsis-three">Synopsis</p>
+                    </div>
+                    <div class="modal-footer">
+                     <a href="#!" class="modal-close waves-effect btn-flat">Close</a>
+                    </div>
+                </div>
+            </card>
+        </div>
+        <div class="diff-button">
+            <!-- back to first page -->
+            <a href = "#">
+                <button id="new-character-button">Select New Character</button>
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <p class="footer">We are professionals:]</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@materializecss/materialize@2.0.2-alpha/dist/js/materialize.min.js"></script>
+    <script src="./interior-script.js"></script>
+</body>
+
+</html>
