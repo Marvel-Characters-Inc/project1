@@ -45,54 +45,23 @@ footer {
   display: inline;
 }
 
-#themesBox, #movieBox {
-  align-items: center;
-  width: 100%;
-}
+  #themesBox, #movieBox {
+    align-items: center;
+    width: 100%;
+  }
 
+  .themeButton {
+    justify-content: center;
+    display: block;
+    align-items: center;
 
-.themeButton {
-  justify-content: center;
-  display: block;
-  align-items: center;
- 
+  }
   /* styles for Modal */
   .MovieBannerImage {
     padding: 3em;
     width: 30%;
     display: inline;
   }
-
-  .MovieInfoBox {
-    padding: 3em;
-    width: 30%;
-    display: inline;
-  }
-#themeButton {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-
-
-#theme {
-  
-  color: white;
-  font-size: 40px;
-  display: flex;
-  justify-content: center;
-  margin: 20px 0px 0px;
-
-}
-
-}
-/* styles for Modal */
-.MovieBannerImage {
-  padding: 3em;
-  width: 30%;
-  display: inline;
-}
 
 .MovieInfoBox {
   padding: 3em;
@@ -105,11 +74,16 @@ flex-direction: row;
 flex-wrap: wrap;
 justify-content: space-around;
 }
+#title {
+  align-items: flex-start;
+  border-style: dotted;
+}
 
 #themeOption {
-  margin: 20px;
+  margin: 10px;
 }
 #theme {
+  border-style: dotted; 
   color: white;
   font-size: 40px;
   display: flex;
