@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function getApi() {
       var requestUrl = 'https://superheroapi.com/api.php/3008242709313318/659/biography';
       var chosenCharacter = ''
-      var apiUrl = 'https://superheroapi.com/api.php/3008242709313318/' + chosenCharacter ;
+      var apiUrl = 'https://superheroapi.com/api.php/3008242709313318/' + chosenCharacter;
       fetch(requestUrl)
       .then(function (response) {
       return response.json();
@@ -19,4 +19,8 @@ document.addEventListener('DOMContentLoaded', function() {
       console.log(data)
       })}
       getApi();
+
+    function displayCharInfo (){
+
+    }
       
