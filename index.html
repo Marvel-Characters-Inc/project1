@@ -35,56 +35,57 @@
 
     <main>
         <section class="hero-options">
-            <h2 id="theme">Choose Your Theme: </h2>
+            <h1>Choose A Theme: </h1>
             <div id="themeButton">
                 <div id="themeOption">
-                    <button class="button" style="height:400px;width:225px"> 
-                        <p >OG Avengers</p>
+                    <button class="button" style="height:400px;width:225px" id="ogAvengersBtn"> 
+                        <p>OG Avengers</p>
                         <img src="./assets/images/avengersCrop.jpg"></img>
                     </button>
                 </div>
                 <div id="themeOption">
-                    <button class="button" style="height:400px;width:225px"> 
+                    <button class="button" style="height:400px;width:225px" id="villainsBtn"> 
                         <p >Villians</p>
                         <img src="./assets/images/villianCrop.jpg"></img>
                     </button>
                 </div>
                 <div id="themeOption">
-                    <button class="button" style="height:400px;width:225px"> 
+                    <button class="button" style="height:400px;width:225px" id="sheroesBtn"> 
                         <p >Sheroes</p>
                         <img src="./assets/images/sheroesCrop.jpg" width="200" height="290"></img>
                     </button>
                 </div>
                 <div id="themeOption">
-                    <button class="button" style="height:400px;width:225px"> 
+                    <button class="button" style="height:400px;width:225px" id="heroesBtn"> 
                         <p >Heroes</p>
                         <img src="./assets/images/hereosCrop.jpg" width="200" height="290"></img>
                     </button>
                 </div>
             </section>
 
-        <section class="section">
-            <div class="container">
+        <section class="section" id="charactersContainer">
 
-                    <!-- movies container -->
-                    <div class="row" id="charactersBox">
-                        <!-- display characters data here -->
-                      </div>
+            <h3 id="ogAvengersTitle" class="hide">OG Avengers</h3>
+            <h3 id="villainsTitle" class="hide">Villains</h3>
+            <h3 id="sheroesTitle" class="hide">Sheroes</h3>
+            <h3 id="heroesTitle" class="hide">Heroes</h3>
 
-    <!-- Movie Modal 
-    <div id="movieModal" class="modal">
-        <div class="modal-content">
-          <span class="close">&times;</span>
-          <img src="https://placehold.co/1000x1000" alt="Placeholder Image for Movie 1" title="Placeholder Image for Movie 1" class="MovieBannerImage">
-            <div class="MovieInfoBox">
-            <h2>Character Name Goes Here</h2>
-            <h3>Character Data Display Here</h3>
-            <p>Movie Data Goes Here...</p>
+             <div class="row hide" id="ogAvengersContainer">
+                <!-- display OG Avengers characters data here -->
             </div>
-        </div>
-      </div>-->
 
+            <div class="row hide" id="villainsContainer">         
+               <!-- display villain characters data here -->
             </div>
+
+            <div class="row hide" id="sheroesContainer">
+              <!-- display sheroes characters data here -->
+            </div>
+
+            <div class="row hide" id="heroesContainer">
+              <!--   display heroes characters data here -->
+            </div>
+
         </section>
 
     </main>

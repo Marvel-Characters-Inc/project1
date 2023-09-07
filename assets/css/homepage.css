@@ -12,6 +12,27 @@ h1 {
   font-family: 'Marvel', sans-serif;
   color: #ffffff;
   line-height: 3em;
+  display: flex;
+  justify-content: center;
+}
+
+h2 {
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+h3 {
+  line-height: 3em;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+}
+
+h4 {
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
 }
 
 header {
@@ -19,10 +40,8 @@ header {
 }
 
 .section {
-  min-height: 300px;
-  width: 100%;
-  padding: 3em;
-  margin: 3em auto;
+  padding: 1em;
+  margin: 1em 2em;
 }
 
 footer {
@@ -34,8 +53,24 @@ footer {
   color: #ffffff;
 }
 
+.hide {
+  display: none;
+}
+
 .heroimage {
   width: 100%;
+}
+
+.s3 {
+  margin: 1em;
+}
+
+.col img {
+  max-width: 100%;
+}
+
+#charactersContainer {
+  background-color: #ffffff;
 }
 
 .characterIcon, .movieIcon {
@@ -74,6 +109,7 @@ flex-direction: row;
 flex-wrap: wrap;
 justify-content: space-around;
 }
+
 #title {
   align-items: flex-start;
 }
@@ -81,14 +117,7 @@ justify-content: space-around;
 #themeOption {
   margin: 10px;
 }
-#theme {
-  color: white;
-  font-size: 40px;
-  display: flex;
-  justify-content: center;
-  margin: 20px 0px 0px;
 
-}
 
 /* The Modal (background) */
 .modal {
