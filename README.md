@@ -18,6 +18,8 @@ The character-specific modal window will display the movie image, title and year
 **JS Libraries:**
 * Materialize: https://cdn.jsdelivr.net/npm/@materializecss/materialize@2.0.2-alpha/dist/js/materialize.min.js
 
+* JQuery: https://code.jquery.com/jquery-3.4.1.min.js
+
 **Wireframe:**
 * Whimsical: https://whimsical.com
 
@@ -27,6 +29,10 @@ The character-specific modal window will display the movie image, title and year
 **APIs Used:**
 * Super Hero API: https://superheroapi.com/index.html
 * TMDB API: https://developer.themoviedb.org/reference/intro/getting-started
+
+**Images**
+* Homepage Hero Image: https://www.komar.de/en/photomurals-marvel-comic
+* Character Images: TBD
 
 ## URLs submitted
 

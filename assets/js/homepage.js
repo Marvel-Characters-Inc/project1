@@ -17,9 +17,6 @@ var ogAvengersTitle = document.getElementById("ogAvengersTitle");
 var villainsTitle = document.getElementById("villainsTitle");
 var sheroesTitle = document.getElementById("sheroesTitle");
 var heroesTitle = document.getElementById("heroesTitle");
-
-      
-//location.reload();
       
 //testing API
 function test() {
@@ -35,6 +32,8 @@ function test() {
     });
   }
   test();
+
+  // First Function - On page load, query SuperHeros API and match character ids with theme selected
 
   //event listener for theme = Og Avengers button
   ogAvengersBtn.addEventListener("click", function () {
@@ -353,14 +352,6 @@ heroesBtn.addEventListener("click", function () {
 
 });
 
+//Add Function that will append the character id value to the interior page URL when a character item is clicked
 
-
-
-// First Function should be on page load, query SuperHeros API and match character ids with theme selected
-
-  //Sub Function should be an event listener for what theme the user clicks and should display characters for each theme based on what is defined in each array/theme (see theme arrays defined above)
-
-
-//Second Function should be event listener for what character the user clicks
-
-//Third Function should be appending the character id value to the interior page URL
+//location.reload();
