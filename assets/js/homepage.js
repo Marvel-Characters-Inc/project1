@@ -22,6 +22,12 @@ var villainsTitle = document.getElementById("villainsTitle");
 var sheroesTitle = document.getElementById("sheroesTitle");
 var heroesTitle = document.getElementById("heroesTitle");
 
+//theme variables
+var theme1 = "OG Avengers";
+var theme2 = "Villains";
+var theme3 = "Sheroes";
+var theme4 = "Heroes"
+
 //testing SuperHero API
 function test() {
     var apiSuperHero = baseURL + APIKey + "/" + characterID;
@@ -48,6 +54,9 @@ function test() {
     sheroesTitle.classList.add("hide");
     heroesContainer.classList.add("hide");
     heroesTitle.classList.add("hide");
+
+    //store Theme value in localstorage
+    localStorage.setItem("theme", theme1);
 
     //Function to pull OgAvengers Characters
     //Theme 1 (OG Avengers) array should contain ids= Thor(659),Hulk(332),Iron Man (346), Captain America (149)
@@ -83,7 +92,12 @@ function test() {
 
       //function that appends the character id value to the interior page URL
       function characterPageLink () {
+        //link to interior page and append character id value in URL
         window.location.href = "https://marvel-characters-inc.github.io/project1/interior.html?id=" + charID;
+
+        //store character data to local storage
+        localStorage.setItem("characterID", charID);
+        localStorage.setItem("characterName", data.name);
          }
 
           });
@@ -111,6 +125,10 @@ function test() {
       //function that appends the character id value to the interior page URL
       function characterPageLink () {
         window.location.href = "https://marvel-characters-inc.github.io/project1/interior.html?id=" + charID;
+
+        //store data to local storage
+        localStorage.setItem("characterID", charID);
+        localStorage.setItem("characterName", data.name);
          }
 
           });
@@ -136,6 +154,10 @@ function test() {
       //function that appends the character id value to the interior page URL
       function characterPageLink () {
         window.location.href = "https://marvel-characters-inc.github.io/project1/interior.html?id=" + charID;
+
+        //store data to local storage
+        localStorage.setItem("characterID", charID);
+        localStorage.setItem("characterName", data.name);
          }
           });
         }
@@ -160,6 +182,10 @@ function test() {
       //function that appends the character id value to the interior page URL
       function characterPageLink () {
         window.location.href = "https://marvel-characters-inc.github.io/project1/interior.html?id=" + charID;
+
+        //store data to local storage
+        localStorage.setItem("characterID", charID);
+        localStorage.setItem("characterName", data.name);
          }
           });
         }
@@ -179,6 +205,8 @@ function test() {
   sheroesTitle.classList.add("hide");
   heroesContainer.classList.add("hide");
   heroesTitle.classList.add("hide");
+
+  localStorage.setItem("theme", theme2);
 
   //Function to pull Villains Characters
   //Theme 2 (Villains) array should contain characters/id = Loki(414), Magneto(423), Thanos (655), Green Goblin (299)
@@ -209,6 +237,10 @@ function test() {
     //function that appends the character id value to the interior page URL
     function characterPageLink () {
         window.location.href = "https://marvel-characters-inc.github.io/project1/interior.html?id=" + charID;
+
+        //store data to local storage
+        localStorage.setItem("characterID", charID);
+        localStorage.setItem("characterName", data.name);
          }
         });
       }
@@ -234,6 +266,10 @@ function test() {
     //function that appends the character id value to the interior page URL
     function characterPageLink () {
         window.location.href = "https://marvel-characters-inc.github.io/project1/interior.html?id=" + charID;
+
+        //store data to local storage
+        localStorage.setItem("characterID", charID);
+        localStorage.setItem("characterName", data.name);
          }
         });
       }
@@ -258,6 +294,10 @@ function test() {
     //function that appends the character id value to the interior page URL
     function characterPageLink () {
         window.location.href = "https://marvel-characters-inc.github.io/project1/interior.html?id=" + charID;
+
+        //store data to local storage
+        localStorage.setItem("characterID", charID);
+        localStorage.setItem("characterName", data.name);
          }
         });
       }
@@ -281,6 +321,10 @@ function test() {
     //function that appends the character id value to the interior page URL
     function characterPageLink () {
         window.location.href = "https://marvel-characters-inc.github.io/project1/interior.html?id=" + charID;
+
+        //store data to local storage
+        localStorage.setItem("characterID", charID);
+        localStorage.setItem("characterName", data.name);
          }
         });
       }
@@ -299,6 +343,8 @@ sheroesBtn.addEventListener("click", function () {
   sheroesTitle.classList.remove("hide");
   heroesContainer.classList.add("hide");
   heroesTitle.classList.add("hide");
+
+  localStorage.setItem("theme", theme3);
 
   //Function to pull Sheroes Characters
   //Theme 3 (Sheroes) array should contain characters/id = Black Widow (107), Scarlet Witch (579), Storm (638), Jean Grey (356)
@@ -328,6 +374,10 @@ sheroesBtn.addEventListener("click", function () {
     characterImageBtn.addEventListener("click", characterPageLink);
     function characterPageLink () {
     window.location.href = "https://marvel-characters-inc.github.io/project1/interior.html?id=" + charID;
+
+    //store data to local storage
+    localStorage.setItem("characterID", charID);
+    localStorage.setItem("characterName", data.name);
      }
         });
       }
@@ -353,6 +403,10 @@ sheroesBtn.addEventListener("click", function () {
     //function that appends the character id value to the interior page URL
     function characterPageLink () {
     window.location.href = "https://marvel-characters-inc.github.io/project1/interior.html?id=" + charID;
+
+    //store data to local storage
+    localStorage.setItem("characterID", charID);
+    localStorage.setItem("characterName", data.name);
      }
         });
       }
@@ -378,6 +432,10 @@ sheroesBtn.addEventListener("click", function () {
     //function that appends the character id value to the interior page URL
     function characterPageLink () {
     window.location.href = "https://marvel-characters-inc.github.io/project1/interior.html?id=" + charID;
+
+    //store data to local storage
+    localStorage.setItem("characterID", charID);
+    localStorage.setItem("characterName", data.name);
      }
         });
       }
@@ -403,6 +461,10 @@ sheroesBtn.addEventListener("click", function () {
     //function that appends the character id value to the interior page URL
     function characterPageLink () {
     window.location.href = "https://marvel-characters-inc.github.io/project1/interior.html?id=" + charID;
+
+    //store data to local storage
+    localStorage.setItem("characterID", charID);
+    localStorage.setItem("characterName", data.name);
      }
         });
       }
@@ -421,6 +483,8 @@ heroesBtn.addEventListener("click", function () {
   sheroesTitle.classList.add("hide");
   heroesContainer.classList.remove("hide");
   heroesTitle.classList.remove("hide");
+
+  localStorage.setItem("theme", theme4);
 
   //Function to pull Heroes Characters
   //Theme 4 (Heroes) array should contain characters/id = Black Panther (106), Ant Man (31), Spider Man (620), Wolverine (717)
@@ -451,6 +515,10 @@ heroesBtn.addEventListener("click", function () {
      //function that appends the character id value to the interior page URL
      function characterPageLink () {
       window.location.href = "https://marvel-characters-inc.github.io/project1/interior.html?id=" + charID;
+
+      //store data to local storage
+      localStorage.setItem("characterID", charID);
+      localStorage.setItem("characterName", data.name);
      }
         });
       }
@@ -476,6 +544,10 @@ heroesBtn.addEventListener("click", function () {
      //function that appends the character id value to the interior page URL
      function characterPageLink () {
       window.location.href = "https://marvel-characters-inc.github.io/project1/interior.html?id=" + charID;
+
+      //store data to local storage
+      localStorage.setItem("characterID", charID);
+      localStorage.setItem("characterName", data.name);
      }
         });
       }
@@ -501,6 +573,10 @@ heroesBtn.addEventListener("click", function () {
      //function that appends the character id value to the interior page URL
      function characterPageLink () {
       window.location.href = "https://marvel-characters-inc.github.io/project1/interior.html?id=" + charID;
+
+      //store data to local storage
+      localStorage.setItem("characterID", charID);
+      localStorage.setItem("characterName", data.name);
      }
         });
       }
@@ -525,6 +601,10 @@ heroesBtn.addEventListener("click", function () {
      //function that appends the character id value to the interior page URL
      function characterPageLink () {
     window.location.href = "https://marvel-characters-inc.github.io/project1/interior.html?id=" + charID;
+
+    //store data to local storage
+    localStorage.setItem("characterID", charID);
+    localStorage.setItem("characterName", data.name);
      }
         });
       }
