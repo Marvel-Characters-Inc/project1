@@ -10,6 +10,7 @@ var baseURL = "https://www.superheroapi.com/api.php/"
 
 //assign variables for containers
 var characterInfoBox = document.getElementById("characterInfoBox");
+var newCharacterButton = document.getElementById("newCharacterButton");
 
 //store character ID value in localstorage
 //localStorage.setItem("characterID", characterID);
@@ -51,6 +52,13 @@ function getCharacterData() {
 
   //event listener for header banner
 heroImage.addEventListener("click", function () {
+    location.reload();
+    localStorage.clear();
+    window.location.href = "index.html";
+  });
+
+    //event listener for newCharacterButton
+newCharacterButton.addEventListener("click", function () {
     location.reload();
     localStorage.clear();
     window.location.href = "index.html";
