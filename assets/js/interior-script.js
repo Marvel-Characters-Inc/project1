@@ -2,6 +2,7 @@ var superHero = document.querySelector("#hero-name")
 var heroImage = document.querySelector('#hero-image')
 var realName = document.querySelector("#real-name")
 var originCity = document.querySelector("#city")
+var movieOneTitle = document.querySelector("#movie-one")
 
 
 
@@ -37,18 +38,43 @@ function getApi() {
 
 var displayCharInfo = function (hero) {
   var heroName = hero.name
-<<<<<<< HEAD
-  var heroRealName = hero.biography['full-name']
-=======
   var heroRealName = hero.biography.publisher
->>>>>>> 2a6320c0d97c9616836a207d8b97b65d001c28d7
   var heroOriginCity = hero.work.base
-  var imageHero = hero.image.url
   
+
+
   superHero.textContent = heroName
   realName.textContent = heroRealName
   originCity.textContent = heroOriginCity
-  heroImage.textContent = imageHero
+
 };
 
+
+function getMovieApi() {
+  var requestMovieUrl = 'https://api.themoviedb.org/3/search/movie?query=Thor&api_key=fc9331fe648135305ebb2f55e0d07da3';
+  fetch(requestMovieUrl)
+    .then(function (response) {
+      if (response.ok) {
+        response.json().then(function (data) {
+          console.log(data)
+          displayCharMovie()
+          
+        })
+      }
+    })
+};
+
+var displayCharMovie = function (movie) {
+var movieOne = movie.page[0].results[0].original_title
+
+
+
+movieOneTitle.textContent = movieOne
+
+
+
+}
+
 getApi();
+
+getMovieApi();
