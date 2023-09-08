@@ -2,9 +2,9 @@ var superHero = document.querySelector("#hero-name")
 var heroImage = document.querySelector('#hero-image')
 var realName = document.querySelector("#real-name")
 var originCity = document.querySelector("#city")
-var movieOneTitle = document.querySelector("#movie-one")
-
-
+var movieOneTitle = document.querySelector("#movie-one-title")
+var movieTwoTitle = document.querySelector("#movie-two-title")
+var movieThreeTitle = document.querySelector("#movie-three-title")
 
 
 
@@ -40,12 +40,13 @@ var displayCharInfo = function (hero) {
   var heroName = hero.name
   var heroRealName = hero.biography.publisher
   var heroOriginCity = hero.work.base
-  
+  var characterImage = hero.image.url
 
 
   superHero.textContent = heroName
   realName.textContent = heroRealName
   originCity.textContent = heroOriginCity
+  heroImage.innerHTML = characterImage
 
 };
 
@@ -56,23 +57,32 @@ function getMovieApi() {
     .then(function (response) {
       if (response.ok) {
         response.json().then(function (data) {
-          console.log(data)
-          displayCharMovie()
-          
+          displayCharMovieOne(data.results[0])
+          displayCharMovieTwo(data.results[1])
+          displayCharMovieThree(data.results[2])
         })
       }
     })
 };
 
-var displayCharMovie = function (movie) {
-var movieOne = movie.page[0].results[0].original_title
 
+var displayCharMovieOne = function (movie) {
+  var movOneTitle = movie.original_title
 
+  movieOneTitle.textContent = movOneTitle
+}
 
-movieOneTitle.textContent = movieOne
+var displayCharMovieTwo = function (movie) {
+  var movTwoTitle = movie.original_title
 
+  movieTwoTitle.textContent = movTwoTitle
+}
 
+var displayCharMovieThree = function (movie) {
+  console.log(movie.original_title)
+  var movThreeTitle = movie.original_title
 
+  movieThreeTitle.textContent = movThreeTitle
 }
 
 getApi();
