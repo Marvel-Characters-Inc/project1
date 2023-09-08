@@ -36,7 +36,7 @@ function getApi() {
 
 var displayCharInfo = function (hero) {
   var heroName = hero.name
-  var heroRealName = hero.biography.aliases[0]
+  var heroRealName = hero.biography['full-name']
   var heroOriginCity = hero.work.base
   
   superHero.textContent = heroName
