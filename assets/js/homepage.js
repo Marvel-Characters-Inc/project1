@@ -53,6 +53,9 @@ ogAvengersBtn.addEventListener("click", function (event) {
       var character3ID = "346";
       var character4ID = "149";
 
+      // clears duplicate row for OG Avengers
+      $('#ogAvengersContainer').empty()
+      
       //Og Avengers character 1 Thor (ID: 659)
       var apiSuperHero659 = baseURL + APIKey + "/" + character1ID;
       fetch(apiSuperHero659).then(function (response) {
@@ -99,8 +102,10 @@ ogAvengersBtn.addEventListener("click", function (event) {
       characterData.addClass('col s3');
       var charID = data.id
       var charName = $("<h4>").text(data.name);
+      
       var charImage = $('<img id="charImg2">').attr('src', data.image.url).attr('title', 'Learn more about Hulk').attr('alt', 'Hulk Image');
       characterData.append(charName).append(charImage);
+    
       $('#ogAvengersContainer').append(characterData);
 
       //event listener for character 2 image click
@@ -204,6 +209,9 @@ ogAvengersBtn.addEventListener("click", function (event) {
     var char2ID = "423";
     var char3ID = "655";
     var char4ID = "299";
+
+    // clears duplicate row for Villians
+    $('#villainsContainer').empty()
 
     //Villains character 1 Loki (ID: 414)
     var apiSuperHero414 = baseURL + APIKey + "/" + char1ID;
@@ -348,6 +356,9 @@ sheroesBtn.addEventListener("click", function () {
     var character3ID = "638";
     var character4ID = "356";
 
+     // clears duplicate row for Sheroes
+     $('#sheroesContainer').empty()
+
     //Sheroes character 1 Black Widow (ID: 107)
     var apiSuperHero107 = baseURL + APIKey + "/" + character1ID;
     fetch(apiSuperHero107).then(function (response) {
@@ -490,6 +501,9 @@ heroesBtn.addEventListener("click", function () {
     var character2ID = "31";
     var character3ID = "620";
     var character4ID = "717";
+
+         // clears duplicate row for Heroes
+         $('#heroesContainer').empty()
 
     //Heroes character 1 Black Panther (ID: 106)
     var apiSuperHero106 = baseURL + APIKey + "/" + character1ID;
