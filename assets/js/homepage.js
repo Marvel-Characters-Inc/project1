@@ -1,57 +1,51 @@
-//define variables
+//define API variables
 var APIKey = "10104712034177731";
-var characterID = "346";
 var baseURL = "https://www.superheroapi.com/api.php/"
 
+//container variables
 var ogAvengersContainer = document.getElementById("ogAvengersContainer");
 var villainsContainer = document.getElementById("villainsContainer");
 var sheroesContainer = document.getElementById("sheroesContainer");
 var heroesContainer = document.getElementById("heroesContainer");
 
+//theme image button variables
 var ogAvengersBtn = document.getElementById("ogAvengersBtn");
 var villainsBtn = document.getElementById("villainsBtn");
 var sheroesBtn = document.getElementById("sheroesBtn");
 var heroesBtn = document.getElementById("heroesBtn");
 var heroImage = document.getElementById("heroImage");
 
+//theme title variables
 var ogAvengersTitle = document.getElementById("ogAvengersTitle");
 var villainsTitle = document.getElementById("villainsTitle");
 var sheroesTitle = document.getElementById("sheroesTitle");
 var heroesTitle = document.getElementById("heroesTitle");
 
-//testing API
-function test() {
-    var apiSuperHero = baseURL + APIKey + "/" + characterID;
+//theme variables
+var theme1 = "ogavengers";
+var theme2 = "villains";
+var theme3 = "sheroes";
+var theme4 = "heroes";
 
-    fetch(apiSuperHero).then(function (response) {
-      console.log(response);
-      if (response.ok) {
-        response.json().then(function (data) {
-          console.log(data);
-        });
-      }
-    });
-  }
-  test();
+//event listener for theme = Og Avengers button
+ogAvengersBtn.addEventListener("click", function (event) {
+  ogAvengersContainer.classList.remove("hide");
+  ogAvengersTitle.classList.remove("hide");
+  villainsContainer.classList.add("hide");
+  villainsTitle.classList.add("hide");
+  sheroesContainer.classList.add("hide");
+  sheroesTitle.classList.add("hide");
+  heroesContainer.classList.add("hide");
+  heroesTitle.classList.add("hide");
 
-  // First Function - On page load, query SuperHeros API and match character ids with theme selected
-
+    // Prevent the default behavior
+    event.preventDefault();
   
-
-  //event listener for theme = Og Avengers button
-  ogAvengersBtn.addEventListener("click", function () {
-    ogAvengersContainer.classList.remove("hide");
-    ogAvengersTitle.classList.remove("hide");
-    villainsContainer.classList.add("hide");
-    villainsTitle.classList.add("hide");
-    sheroesContainer.classList.add("hide");
-    sheroesTitle.classList.add("hide");
-    heroesContainer.classList.add("hide");
-    heroesTitle.classList.add("hide");
+  //store Theme value in localstorage
+  localStorage.setItem("theme", theme1);
 
     //Function to pull OgAvengers Characters
-    //Theme 1 (OG Avengers) array should contain ids=
-    //Thor(659),Hulk(332),Iron Man (346), Captain America (149)
+    //Theme 1 (OG Avengers) array should contain ids= Thor(659),Hulk(332),Iron Man (346), Captain America (149)
 
     function getOgAvengers() {
       var character1ID = "659";
@@ -59,115 +53,138 @@ function test() {
       var character3ID = "346";
       var character4ID = "149";
 
+      //Og Avengers character 1 Thor (ID: 659)
       var apiSuperHero659 = baseURL + APIKey + "/" + character1ID;
       fetch(apiSuperHero659).then(function (response) {
         if (response.ok) {
           response.json().then(function (data) {
+            console.log(data);
             
             var characterData = $('<div>');
             characterData.addClass('col s3');
             
-            var charID = data.id
-            
+            var charID = data.id;
             var charName = $("<h4>").text(data.name);
-
-            var charImage = $('<img id="charImg1">').attr('src', data.image.url);
-
-      characterData.append(charName).append(charImage);
+            var charImage = $('<img id="charImg1">').attr('src', data.image.url).attr('title', 'Learn more about Thor').attr('alt', 'Thor Image');
+            
+            characterData.append(charName).append(charImage);
 
       $('#ogAvengersContainer').append(characterData);
 
-      //event listener for character image click
+      //event listener for character 1 image click
       var characterImageBtn = document.getElementById("charImg1");
       characterImageBtn.addEventListener("click", characterPageLink);
 
+      //function that appends the character id value to the interior page URL
       function characterPageLink () {
-        window.location.href = "https://marvel-characters-inc.github.io/project1/interior.html?id=" + charID;
+        //link to interior page and append character id value in URL
+        window.location.href = "interior2.html?id=" + charID + "&theme=" + theme1;
+
+        //store character data to local storage
+        localStorage.setItem("characterID", charID);
+        localStorage.setItem("characterName", data.name);
          }
 
           });
         }
       });
 
+      //Og Avengers character 2 Hulk (ID: 332)
       var apiSuperHero332 = baseURL + APIKey + "/" + character2ID;
       fetch(apiSuperHero332).then(function (response) {
         if (response.ok) {
           response.json().then(function (data) {
+            console.log(data);
             var characterData = $('<div>');
       characterData.addClass('col s3');
       var charID = data.id
       var charName = $("<h4>").text(data.name);
-      var charImage = $('<img id="charImg2">').attr('src', data.image.url);characterData.append(charName).append(charImage);
+      var charImage = $('<img id="charImg2">').attr('src', data.image.url).attr('title', 'Learn more about Hulk').attr('alt', 'Hulk Image');
+      characterData.append(charName).append(charImage);
       $('#ogAvengersContainer').append(characterData);
 
-      //event listener for character image click
+      //event listener for character 2 image click
       var characterImageBtn = document.getElementById("charImg2");
 
       characterImageBtn.addEventListener("click", characterPageLink);
 
+      //function that appends the character id value to the interior page URL
       function characterPageLink () {
-        window.location.href = "https://marvel-characters-inc.github.io/project1/interior.html?id=" + charID;
+        window.location.href = "interior2.html?id=" + charID + "&theme=" + theme1;
+
+        //store data to local storage
+        localStorage.setItem("characterID", charID);
+        localStorage.setItem("characterName", data.name);
          }
 
           });
         }
       });
 
+      //Og Avengers character 3 Iron Man (ID: 346)
       var apiSuperHero346 = baseURL + APIKey + "/" + character3ID;
       fetch(apiSuperHero346).then(function (response) {
         if (response.ok) {
           response.json().then(function (data) {
+            console.log(data);
             var characterData = $('<div>');
       characterData.addClass('col s3');
       var charID = data.id
       var charName = $("<h4>").text(data.name);
-      var charImage = $('<img id="charImg3">').attr('src', data.image.url);characterData.append(charName).append(charImage);
+      var charImage = $('<img id="charImg3">').attr('src', data.image.url).attr('title', 'Learn more about Iron Man').attr('alt', 'Iron Man Image');characterData.append(charName).append(charImage);
       $('#ogAvengersContainer').append(characterData);
 
-      //event listener for character image click
-
-   var characterImageBtn = document.getElementById("charImg3");
-
+      //event listener for character 3 image click
+      var characterImageBtn = document.getElementById("charImg3");
       characterImageBtn.addEventListener("click", characterPageLink);
 
+      //function that appends the character id value to the interior page URL
       function characterPageLink () {
-        window.location.href = "https://marvel-characters-inc.github.io/project1/interior.html?id=" + charID;
-         }
+        window.location.href = "interior2.html?id=" + charID + "&theme=" + theme1;
 
+        //store data to local storage
+        localStorage.setItem("characterID", charID);
+        localStorage.setItem("characterName", data.name);
+         }
           });
         }
       });
 
+      //Og Avengers character 4 Captain America (ID: 149)
       var apiSuperHero149 = baseURL + APIKey + "/" + character4ID;
       fetch(apiSuperHero149).then(function (response) {
         if (response.ok) {
           response.json().then(function (data) {
+            console.log(data);
             var characterData = $('<div>');
       characterData.addClass('col s3');
       var charID = data.id
       var charName = $("<h4>").text(data.name);
-      var charImage = $('<img id="charImg4">').attr('src', data.image.url);characterData.append(charName).append(charImage);
+      var charImage = $('<img id="charImg4">').attr('src', data.image.url).attr('title', 'Learn more about Captain America').attr('alt', 'Captain America Image');characterData.append(charName).append(charImage);
       $('#ogAvengersContainer').append(characterData);
 
-      //event listener for character image click
-  var characterImageBtn = document.getElementById("charImg4");
-
+      //event listener for character 4 image click
+      var characterImageBtn = document.getElementById("charImg4");
       characterImageBtn.addEventListener("click", characterPageLink);
 
+      //function that appends the character id value to the interior page URL
       function characterPageLink () {
-        window.location.href = "https://marvel-characters-inc.github.io/project1/interior.html?id=" + charID;
-         }
+        window.location.href = "interior2.html?id=" + charID + "&theme=" + theme1;
 
+        //store data to local storage
+        localStorage.setItem("characterID", charID);
+        localStorage.setItem("characterName", data.name);
+         }
           });
         }
       });
     }
     getOgAvengers();
-
 });
 
  //event listener for theme = Villains button
-villainsBtn.addEventListener("click", function () {
+ villainsBtn.addEventListener("click", function () {
+
   ogAvengersContainer.classList.add("hide");
   ogAvengersTitle.classList.add("hide");
   villainsContainer.classList.remove("hide");
@@ -177,9 +194,10 @@ villainsBtn.addEventListener("click", function () {
   heroesContainer.classList.add("hide");
   heroesTitle.classList.add("hide");
 
+  localStorage.setItem("theme", theme2);
+
   //Function to pull Villains Characters
-  //Theme 2 (Villains) array should contain characters/id = 
-  //Loki(414), Magneto(423), Thanos (655), Green Goblin (299)
+  //Theme 2 (Villains) array should contain characters/id = Loki(414), Magneto(423), Thanos (655), Green Goblin (299)
   
   function getVillains() {
     var char1ID = "414";
@@ -187,92 +205,118 @@ villainsBtn.addEventListener("click", function () {
     var char3ID = "655";
     var char4ID = "299";
 
+    //Villains character 1 Loki (ID: 414)
     var apiSuperHero414 = baseURL + APIKey + "/" + char1ID;
     fetch(apiSuperHero414).then(function (response) {
       if (response.ok) {
         response.json().then(function (data) {
+          console.log(data);
           var characterData = $('<div>');
     characterData.addClass('col s3');
     var charID = data.id
     var charName = $("<h4>").text(data.name);
-    var charImage = $('<img id="charImg2a">').attr('src', data.image.url);characterData.append(charName).append(charImage);
+    var charImage = $('<img id="charImg2a">').attr('src', data.image.url).attr('title', 'Learn more about Loki').attr('alt', 'Loki Image');
+    characterData.append(charName).append(charImage);
     $('#villainsContainer').append(characterData);
 
-    //event listener for character image click
-  var characterImageBtn = document.getElementById("charImg2a");
+    //event listener for character 1 image click
+    var characterImageBtn = document.getElementById("charImg2a");
+    characterImageBtn.addEventListener("click", characterPageLink);
 
-      characterImageBtn.addEventListener("click", characterPageLink);
+    //function that appends the character id value to the interior page URL
+    function characterPageLink () {
+      window.location.href = "interior2.html?id=" + charID + "&theme=" + theme2;
 
-      function characterPageLink () {
-        window.location.href = "https://marvel-characters-inc.github.io/project1/interior.html?id=" + charID;
+        //store data to local storage
+        localStorage.setItem("characterID", charID);
+        localStorage.setItem("characterName", data.name);
          }
-
         });
       }
     });
 
+    //Villains character 2 Magneto (ID: 423)
     var apiSuperHero423 = baseURL + APIKey + "/" + char2ID;
     fetch(apiSuperHero423).then(function (response) {
       if (response.ok) {
         response.json().then(function (data) {
+          console.log(data);
           var characterData = $('<div>');
     characterData.addClass('col s3');
     var charID = data.id
     var charName = $("<h4>").text(data.name);
-    var charImage = $('<img id="charImg2b">').attr('src', data.image.url);characterData.append(charName).append(charImage);
+    var charImage = $('<img id="charImg2b">').attr('src', data.image.url).attr('title', 'Learn more about Magneto').attr('alt', 'Magneto Image');
+    characterData.append(charName).append(charImage);
     $('#villainsContainer').append(characterData);
 
-    //event listener for character image click
-  var characterImageBtn = document.getElementById("charImg2b");
+    //event listener for character 2 image click
+    var characterImageBtn = document.getElementById("charImg2b");
+    characterImageBtn.addEventListener("click", characterPageLink);
 
-      characterImageBtn.addEventListener("click", characterPageLink);
+    //function that appends the character id value to the interior page URL
+    function characterPageLink () {
+      window.location.href = "interior2.html?id=" + charID + "&theme=" + theme2;
 
-      function characterPageLink () {
-        window.location.href = "https://marvel-characters-inc.github.io/project1/interior.html?id=" + charID;
+        //store data to local storage
+        localStorage.setItem("characterID", charID);
+        localStorage.setItem("characterName", data.name);
          }
         });
       }
     });
 
+    //Villains character 3 Thanos (ID: 655)
     var apiSuperHero655 = baseURL + APIKey + "/" + char3ID;
     fetch(apiSuperHero655).then(function (response) {
       if (response.ok) {
         response.json().then(function (data) {
+          console.log(data);
           var characterData = $('<div>');
     characterData.addClass('col s3');
     var charID = data.id
     var charName = $("<h4>").text(data.name);
-    var charImage = $('<img id="charImg2c">').attr('src', data.image.url);characterData.append(charName).append(charImage);
+    var charImage = $('<img id="charImg2c">').attr('src', data.image.url).attr('title', 'Learn more about Thanos').attr('alt', 'Thanos Image');
+    characterData.append(charName).append(charImage);
     $('#villainsContainer').append(characterData);
-    //event listener for character image click
-  var characterImageBtn = document.getElementById("charImg2c");
+    //event listener for character 3 image click
+    var characterImageBtn = document.getElementById("charImg2c");
+    characterImageBtn.addEventListener("click", characterPageLink);
 
-      characterImageBtn.addEventListener("click", characterPageLink);
+    //function that appends the character id value to the interior page URL
+    function characterPageLink () {
+      window.location.href = "interior2.html?id=" + charID + "&theme=" + theme2;
 
-      function characterPageLink () {
-        window.location.href = "https://marvel-characters-inc.github.io/project1/interior.html?id=" + charID;
+        //store data to local storage
+        localStorage.setItem("characterID", charID);
+        localStorage.setItem("characterName", data.name);
          }
         });
       }
     });
 
+    //Villains character 4 Green Goblin (ID: 299)
     var apiSuperHero299 = baseURL + APIKey + "/" + char4ID;
     fetch(apiSuperHero299).then(function (response) {
       if (response.ok) {
         response.json().then(function (data) {
+          console.log(data);
           var characterData = $('<div>');
     characterData.addClass('col s3');
     var charID = data.id
     var charName = $("<h4>").text(data.name);
-    var charImage = $('<img id="charImg2d">').attr('src', data.image.url);characterData.append(charName).append(charImage);
+    var charImage = $('<img id="charImg2d">').attr('src', data.image.url).attr('title', 'Learn more about Green Goblin').attr('alt', 'Green Goblin Image');characterData.append(charName).append(charImage);
     $('#villainsContainer').append(characterData);
-    //event listener for character image click
-  var characterImageBtn = document.getElementById("charImg2d");
+    //event listener for character 4 image click
+    var characterImageBtn = document.getElementById("charImg2d");
+    characterImageBtn.addEventListener("click", characterPageLink);
 
-      characterImageBtn.addEventListener("click", characterPageLink);
+    //function that appends the character id value to the interior page URL
+    function characterPageLink () {
+      window.location.href = "interior2.html?id=" + charID + "&theme=" + theme2;
 
-      function characterPageLink () {
-        window.location.href = "https://marvel-characters-inc.github.io/project1/interior.html?id=" + charID;
+        //store data to local storage
+        localStorage.setItem("characterID", charID);
+        localStorage.setItem("characterName", data.name);
          }
         });
       }
@@ -292,8 +336,10 @@ sheroesBtn.addEventListener("click", function () {
   heroesContainer.classList.add("hide");
   heroesTitle.classList.add("hide");
 
-  //Theme 3 (Sheroes) array should contain characters/id = 
-  //Black Widow (107), Scarlet Witch (579), Storm (638), Jean Grey (356)
+  localStorage.setItem("theme", theme3);
+
+  //Function to pull Sheroes Characters
+  //Theme 3 (Sheroes) array should contain characters/id = Black Widow (107), Scarlet Witch (579), Storm (638), Jean Grey (356)
 
   function getSheroes() {
     
@@ -302,97 +348,120 @@ sheroesBtn.addEventListener("click", function () {
     var character3ID = "638";
     var character4ID = "356";
 
+    //Sheroes character 1 Black Widow (ID: 107)
     var apiSuperHero107 = baseURL + APIKey + "/" + character1ID;
     fetch(apiSuperHero107).then(function (response) {
       if (response.ok) {
         response.json().then(function (data) {
+          console.log(data);
           var characterData = $('<div>');
     characterData.addClass('col s3');
     var charID = data.id
     var charName = $("<h4>").text(data.name);
-    var charImage = $('<img id="charImg3a">').attr('src', data.image.url);characterData.append(charName).append(charImage);
+    var charImage = $('<img id="charImg3a">').attr('src', data.image.url).attr('title', 'Learn more about Black Widow').attr('alt', 'Black Widow Image');
+    characterData.append(charName).append(charImage);
     $('#sheroesContainer').append(characterData);
 
-    //event listener for character image click
-  var characterImageBtn = document.getElementById("charImg3a");
+    //event listener for character 1 image click
+    var characterImageBtn = document.getElementById("charImg3a");
+    characterImageBtn.addEventListener("click", characterPageLink);
+    function characterPageLink () {
+      window.location.href = "interior2.html?id=" + charID + "&theme=" + theme3;
 
-  characterImageBtn.addEventListener("click", characterPageLink);
-
-  function characterPageLink () {
-    window.location.href = "https://marvel-characters-inc.github.io/project1/interior.html?id=" + charID;
+    //store data to local storage
+    localStorage.setItem("characterID", charID);
+    localStorage.setItem("characterName", data.name);
      }
-
         });
       }
     });
 
+    //Sheroes character 2 Scarlet Witch (ID: 579)
     var apiSuperHero579 = baseURL + APIKey + "/" + character2ID;
     fetch(apiSuperHero579).then(function (response) {
       if (response.ok) {
         response.json().then(function (data) {
+          console.log(data);
           var characterData = $('<div>');
     characterData.addClass('col s3');
     var charID = data.id
     var charName = $("<h4>").text(data.name);
-    var charImage = $('<img id="charImg3b">').attr('src', data.image.url);characterData.append(charName).append(charImage);
+    var charImage = $('<img id="charImg3b">').attr('src', data.image.url).attr('title', 'Learn more about Scarlet Witch').attr('alt', 'Scarlet Witch Image');
+    characterData.append(charName).append(charImage);
     $('#sheroesContainer').append(characterData);
 
-    //event listener for character image click
-  var characterImageBtn = document.getElementById("charImg3b");
+    //event listener for character 2 image click
+    var characterImageBtn = document.getElementById("charImg3b");
+    characterImageBtn.addEventListener("click", characterPageLink);
 
-  characterImageBtn.addEventListener("click", characterPageLink);
+    //function that appends the character id value to the interior page URL
+    function characterPageLink () {
+      window.location.href = "interior2.html?id=" + charID + "&theme=" + theme3;
 
-  function characterPageLink () {
-    window.location.href = "https://marvel-characters-inc.github.io/project1/interior.html?id=" + charID;
+    //store data to local storage
+    localStorage.setItem("characterID", charID);
+    localStorage.setItem("characterName", data.name);
      }
-
         });
       }
     });
 
-    var apiSuperHero156 = baseURL + APIKey + "/" + character3ID;
-    fetch(apiSuperHero156).then(function (response) {
+    //Sheroes character 3 Storm (ID: 638)
+    var apiSuperHero638 = baseURL + APIKey + "/" + character3ID;
+    fetch(apiSuperHero638).then(function (response) {
       if (response.ok) {
         response.json().then(function (data) {
+          console.log(data);
           var characterData = $('<div>');
     characterData.addClass('col s3');
     var charID = data.id
     var charName = $("<h4>").text(data.name);
-    var charImage = $('<img id="charImg3c">').attr('src', data.image.url);characterData.append(charName).append(charImage);
+    var charImage = $('<img id="charImg3c">').attr('src', data.image.url).attr('title', 'Learn more about Storm').attr('alt', 'Storm Image');
+    characterData.append(charName).append(charImage);
     $('#sheroesContainer').append(characterData);
 
-    //event listener for character image click
-  var characterImageBtn = document.getElementById("charImg3c");
+    //event listener for character 3 image click
+    var characterImageBtn = document.getElementById("charImg3c");
+    characterImageBtn.addEventListener("click", characterPageLink);
 
-  characterImageBtn.addEventListener("click", characterPageLink);
+    //function that appends the character id value to the interior page URL
+    function characterPageLink () {
+      window.location.href = "interior2.html?id=" + charID + "&theme=" + theme3;
 
-  function characterPageLink () {
-    window.location.href = "https://marvel-characters-inc.github.io/project1/interior.html?id=" + charID;
+    //store data to local storage
+    localStorage.setItem("characterID", charID);
+    localStorage.setItem("characterName", data.name);
      }
-
         });
       }
     });
 
+    //Sheroes character 4 Jean Grey (ID: 356)
     var apiSuperHero356 = baseURL + APIKey + "/" + character4ID;
     fetch(apiSuperHero356).then(function (response) {
       if (response.ok) {
         response.json().then(function (data) {
+          console.log(data);
           var characterData = $('<div>');
     characterData.addClass('col s3');
     var charID = data.id
     var charName = $("<h4>").text(data.name);
-    var charImage = $('<img id="charImg3d">').attr('src', data.image.url);characterData.append(charName).append(charImage);
+    var charImage = $('<img id="charImg3d">').attr('src', data.image.url).attr('title', 'Learn more about Jean Grey').attr('alt', 'Jean Grey Image');
+    characterData.append(charName).append(charImage);
     $('#sheroesContainer').append(characterData);
-    //event listener for character image click
-  var characterImageBtn = document.getElementById("charImg3d");
 
-  characterImageBtn.addEventListener("click", characterPageLink);
+    //event listener for character 4 image click
+    var characterImageBtn = document.getElementById("charImg3d");
+    characterImageBtn.addEventListener("click", characterPageLink);
 
-  function characterPageLink () {
-    window.location.href = "https://marvel-characters-inc.github.io/project1/interior.html?id=" + charID;
+    //function that appends the character id value to the interior page URL
+    function characterPageLink () {
+    window.location.href = "interior2.html?id=" + charID + "&theme=" + theme3;
+
+    //store data to local storage
+    localStorage.setItem("characterID", charID);
+    localStorage.setItem("characterName", data.name);
      }
-
         });
       }
     });
@@ -411,9 +480,10 @@ heroesBtn.addEventListener("click", function () {
   heroesContainer.classList.remove("hide");
   heroesTitle.classList.remove("hide");
 
-//Theme 4 (Heroes) array should contain characters/id = 
-//Black Panther (106), Ant Man (31), Spider Man (620), Wolverine (717)
+  localStorage.setItem("theme", theme4);
 
+  //Function to pull Heroes Characters
+  //Theme 4 (Heroes) array should contain characters/id = Black Panther (106), Ant Man (31), Spider Man (620), Wolverine (717)
 
   function getHeroes() {
     var character1ID = "106";
@@ -421,109 +491,130 @@ heroesBtn.addEventListener("click", function () {
     var character3ID = "620";
     var character4ID = "717";
 
+    //Heroes character 1 Black Panther (ID: 106)
     var apiSuperHero106 = baseURL + APIKey + "/" + character1ID;
     fetch(apiSuperHero106).then(function (response) {
       if (response.ok) {
         response.json().then(function (data) {
+          console.log(data);
           var characterData = $('<div>');
     characterData.addClass('col s3');
     var charID = data.id
     var charName = $("<h4>").text(data.name);
-    var charImage = $('<img id="charImg4a">').attr('src', data.image.url);characterData.append(charName).append(charImage);
+    var charImage = $('<img id="charImg4a">').attr('src', data.image.url).attr('title', 'Learn more about Black Panther').attr('alt', 'Black Panther Image');
+    characterData.append(charName).append(charImage);
     $('#heroesContainer').append(characterData);
 
-     //event listener for character image click
-  var characterImageBtn = document.getElementById("charImg4a");
+     //event listener for character 1 image click
+     var characterImageBtn = document.getElementById("charImg4a");
+     characterImageBtn.addEventListener("click", characterPageLink);
 
-  characterImageBtn.addEventListener("click", characterPageLink);
+     //function that appends the character id value to the interior page URL
+     function characterPageLink () {
+      window.location.href = "interior2.html?id=" + charID + "&theme=" + theme4;
 
-  function characterPageLink () {
-    window.location.href = "https://marvel-characters-inc.github.io/project1/interior.html?id=" + charID;
+      //store data to local storage
+      localStorage.setItem("characterID", charID);
+      localStorage.setItem("characterName", data.name);
      }
-
         });
       }
     });
 
+    //Heroes character 2 Ant Man (ID: 31)
     var apiSuperHero31 = baseURL + APIKey + "/" + character2ID;
     fetch(apiSuperHero31).then(function (response) {
       if (response.ok) {
         response.json().then(function (data) {
+          console.log(data);
           var characterData = $('<div>');
     characterData.addClass('col s3');
     var charID = data.id
     var charName = $("<h4>").text(data.name);
-    var charImage = $('<img id="charImg4b">').attr('src', data.image.url);characterData.append(charName).append(charImage);
+    var charImage = $('<img id="charImg4b">').attr('src', data.image.url).attr('title', 'Learn more about Ant Man').attr('alt', 'Ant Man Image');
+    characterData.append(charName).append(charImage);
     $('#heroesContainer').append(characterData);
 
-     //event listener for character image click
-  var characterImageBtn = document.getElementById("charImg4b");
+     //event listener for character 2 image click
+     var characterImageBtn = document.getElementById("charImg4b");
+     characterImageBtn.addEventListener("click", characterPageLink);
 
-  characterImageBtn.addEventListener("click", characterPageLink);
+     //function that appends the character id value to the interior page URL
+     function characterPageLink () {
+      window.location.href = "interior2.html?id=" + charID + "&theme=" + theme4;
 
-  function characterPageLink () {
-    window.location.href = "https://marvel-characters-inc.github.io/project1/interior.html?id=" + charID;
+      //store data to local storage
+      localStorage.setItem("characterID", charID);
+      localStorage.setItem("characterName", data.name);
      }
         });
       }
     });
 
+    //Heroes character 3 Spider Man (ID: 620)
     var apiSuperHero620 = baseURL + APIKey + "/" + character3ID;
     fetch(apiSuperHero620).then(function (response) {
       if (response.ok) {
         response.json().then(function (data) {
+          console.log(data);
           var characterData = $('<div>');
     characterData.addClass('col s3');
     var charID = data.id
     var charName = $("<h4>").text(data.name);
-    var charImage = $('<img id="charImg4c">').attr('src', data.image.url);characterData.append(charName).append(charImage);
+    var charImage = $('<img id="charImg4c">').attr('src', data.image.url).attr('title', 'Learn more about Spider Man').attr('alt', 'Spider Man Image');
+    characterData.append(charName).append(charImage);
     $('#heroesContainer').append(characterData);
 
-     //event listener for character image click
-  var characterImageBtn = document.getElementById("charImg4c");
+     //event listener for character 3 image click
+     var characterImageBtn = document.getElementById("charImg4c");
+     characterImageBtn.addEventListener("click", characterPageLink);
 
-  characterImageBtn.addEventListener("click", characterPageLink);
+     //function that appends the character id value to the interior page URL
+     function characterPageLink () {
+      window.location.href = "interior2.html?id=" + charID + "&theme=" + theme4;
 
-  function characterPageLink () {
-    window.location.href = "https://marvel-characters-inc.github.io/project1/interior.html?id=" + charID;
+      //store data to local storage
+      localStorage.setItem("characterID", charID);
+      localStorage.setItem("characterName", data.name);
      }
-
         });
       }
     });
 
+    //Heroes character 4 Wolverine (ID: 717)
     var apiSuperHero717 = baseURL + APIKey + "/" + character4ID;
     fetch(apiSuperHero717).then(function (response) {
       if (response.ok) {
         response.json().then(function (data) {
+          console.log(data);
           var characterData = $('<div>');
     characterData.addClass('col s3');
     var charID = data.id
     var charName = $("<h4>").text(data.name);
-    var charImage = $('<img id="charImg4d">').attr('src', data.image.url);characterData.append(charName).append(charImage);
+    var charImage = $('<img id="charImg4d">').attr('src', data.image.url).attr('title', 'Learn more about Wolverine').attr('alt', 'Wolverine Image');characterData.append(charName).append(charImage);
     $('#heroesContainer').append(characterData);
 
-     //event listener for character image click
-  var characterImageBtn = document.getElementById("charImg4d");
+     //event listener for character 4 image click
+     var characterImageBtn = document.getElementById("charImg4d");
+     characterImageBtn.addEventListener("click", characterPageLink);
+     
+     //function that appends the character id value to the interior page URL
+     function characterPageLink () {
+    window.location.href = "interior2.html?id=" + charID + "&theme=" + theme4;
 
-  characterImageBtn.addEventListener("click", characterPageLink);
-
-  //Add Function that appends the character id value to the interior page URL
-
-  function characterPageLink () {
-    window.location.href = "https://marvel-characters-inc.github.io/project1/interior.html?id=" + charID;
+    //store data to local storage
+    localStorage.setItem("characterID", charID);
+    localStorage.setItem("characterName", data.name);
      }
-
         });
       }
     });
   }
   getHeroes();
-
 });
-
 
 //event listener for homepage header banner
 heroImage.addEventListener("click", function () {
   location.reload();
+  localStorage.clear();
 });
