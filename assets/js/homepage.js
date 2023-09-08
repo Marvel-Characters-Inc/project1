@@ -1,6 +1,5 @@
 //define API variables
 var APIKey = "10104712034177731";
-var characterID = "346";
 var baseURL = "https://www.superheroapi.com/api.php/"
 
 //container variables
@@ -26,37 +25,21 @@ var heroesTitle = document.getElementById("heroesTitle");
 var theme1 = "OG Avengers";
 var theme2 = "Villains";
 var theme3 = "Sheroes";
-var theme4 = "Heroes"
+var theme4 = "Heroes";
 
-//testing SuperHero API
-function test() {
-    var apiSuperHero = baseURL + APIKey + "/" + characterID;
-
-    fetch(apiSuperHero).then(function (response) {
-      console.log(response);
-      if (response.ok) {
-        response.json().then(function (data) {
-          console.log(data);
-        });
-      }
-    });
-  }
-  test();
-
-  //event listener for theme = Og Avengers button
-  ogAvengersBtn.addEventListener("click", function () {
-
-    ogAvengersContainer.classList.remove("hide");
-    ogAvengersTitle.classList.remove("hide");
-    villainsContainer.classList.add("hide");
-    villainsTitle.classList.add("hide");
-    sheroesContainer.classList.add("hide");
-    sheroesTitle.classList.add("hide");
-    heroesContainer.classList.add("hide");
-    heroesTitle.classList.add("hide");
-
-    //store Theme value in localstorage
-    localStorage.setItem("theme", theme1);
+//event listener for theme = Og Avengers button
+ogAvengersBtn.addEventListener("click", function () {
+  ogAvengersContainer.classList.remove("hide");
+  ogAvengersTitle.classList.remove("hide");
+  villainsContainer.classList.add("hide");
+  villainsTitle.classList.add("hide");
+  sheroesContainer.classList.add("hide");
+  sheroesTitle.classList.add("hide");
+  heroesContainer.classList.add("hide");
+  heroesTitle.classList.add("hide");
+  
+  //store Theme value in localstorage
+  localStorage.setItem("theme", theme1);
 
     //Function to pull OgAvengers Characters
     //Theme 1 (OG Avengers) array should contain ids= Thor(659),Hulk(332),Iron Man (346), Captain America (149)
@@ -72,11 +55,13 @@ function test() {
       fetch(apiSuperHero659).then(function (response) {
         if (response.ok) {
           response.json().then(function (data) {
+
+            console.log(data);
             
             var characterData = $('<div>');
             characterData.addClass('col s3');
             
-            var charID = data.id
+            var charID = data.id;
             
             var charName = $("<h4>").text(data.name);
 
@@ -109,6 +94,7 @@ function test() {
       fetch(apiSuperHero332).then(function (response) {
         if (response.ok) {
           response.json().then(function (data) {
+            console.log(data);
             var characterData = $('<div>');
       characterData.addClass('col s3');
       var charID = data.id
@@ -140,6 +126,7 @@ function test() {
       fetch(apiSuperHero346).then(function (response) {
         if (response.ok) {
           response.json().then(function (data) {
+            console.log(data);
             var characterData = $('<div>');
       characterData.addClass('col s3');
       var charID = data.id
@@ -168,6 +155,7 @@ function test() {
       fetch(apiSuperHero149).then(function (response) {
         if (response.ok) {
           response.json().then(function (data) {
+            console.log(data);
             var characterData = $('<div>');
       characterData.addClass('col s3');
       var charID = data.id
@@ -222,6 +210,7 @@ function test() {
     fetch(apiSuperHero414).then(function (response) {
       if (response.ok) {
         response.json().then(function (data) {
+          console.log(data);
           var characterData = $('<div>');
     characterData.addClass('col s3');
     var charID = data.id
@@ -251,6 +240,7 @@ function test() {
     fetch(apiSuperHero423).then(function (response) {
       if (response.ok) {
         response.json().then(function (data) {
+          console.log(data);
           var characterData = $('<div>');
     characterData.addClass('col s3');
     var charID = data.id
@@ -280,6 +270,7 @@ function test() {
     fetch(apiSuperHero655).then(function (response) {
       if (response.ok) {
         response.json().then(function (data) {
+          console.log(data);
           var characterData = $('<div>');
     characterData.addClass('col s3');
     var charID = data.id
@@ -308,6 +299,7 @@ function test() {
     fetch(apiSuperHero299).then(function (response) {
       if (response.ok) {
         response.json().then(function (data) {
+          console.log(data);
           var characterData = $('<div>');
     characterData.addClass('col s3');
     var charID = data.id
@@ -361,6 +353,7 @@ sheroesBtn.addEventListener("click", function () {
     fetch(apiSuperHero107).then(function (response) {
       if (response.ok) {
         response.json().then(function (data) {
+          console.log(data);
           var characterData = $('<div>');
     characterData.addClass('col s3');
     var charID = data.id
@@ -388,6 +381,7 @@ sheroesBtn.addEventListener("click", function () {
     fetch(apiSuperHero579).then(function (response) {
       if (response.ok) {
         response.json().then(function (data) {
+          console.log(data);
           var characterData = $('<div>');
     characterData.addClass('col s3');
     var charID = data.id
@@ -417,6 +411,7 @@ sheroesBtn.addEventListener("click", function () {
     fetch(apiSuperHero638).then(function (response) {
       if (response.ok) {
         response.json().then(function (data) {
+          console.log(data);
           var characterData = $('<div>');
     characterData.addClass('col s3');
     var charID = data.id
@@ -446,6 +441,7 @@ sheroesBtn.addEventListener("click", function () {
     fetch(apiSuperHero356).then(function (response) {
       if (response.ok) {
         response.json().then(function (data) {
+          console.log(data);
           var characterData = $('<div>');
     characterData.addClass('col s3');
     var charID = data.id
@@ -500,6 +496,7 @@ heroesBtn.addEventListener("click", function () {
     fetch(apiSuperHero106).then(function (response) {
       if (response.ok) {
         response.json().then(function (data) {
+          console.log(data);
           var characterData = $('<div>');
     characterData.addClass('col s3');
     var charID = data.id
@@ -529,6 +526,7 @@ heroesBtn.addEventListener("click", function () {
     fetch(apiSuperHero31).then(function (response) {
       if (response.ok) {
         response.json().then(function (data) {
+          console.log(data);
           var characterData = $('<div>');
     characterData.addClass('col s3');
     var charID = data.id
@@ -558,6 +556,7 @@ heroesBtn.addEventListener("click", function () {
     fetch(apiSuperHero620).then(function (response) {
       if (response.ok) {
         response.json().then(function (data) {
+          console.log(data);
           var characterData = $('<div>');
     characterData.addClass('col s3');
     var charID = data.id
@@ -587,6 +586,7 @@ heroesBtn.addEventListener("click", function () {
     fetch(apiSuperHero717).then(function (response) {
       if (response.ok) {
         response.json().then(function (data) {
+          console.log(data);
           var characterData = $('<div>');
     characterData.addClass('col s3');
     var charID = data.id
