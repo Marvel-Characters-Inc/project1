@@ -17,20 +17,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Marvel:wght@400;700&display=swap" rel="stylesheet">
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 </head>
 
 <body>
     <header>
-
-        <!-- <h1>Marvel Characters, Inc.</h1> 
-        Placeholder Image https://placehold.co/1800x435 -->
-
         <!-- hero image -->
-        <img src="./assets/images/sample-hero-image.jpg" alt="Marvel Hero Image" title="Marvel Hero Image" class="heroimage" />
-
-        <!-- Option 2 
-        <img src="Banner-Sample-1800x435.jpg" alt="Marvel Hero Image" title="Marvel Cinematic Universe" class="heroimage" /> -->
-
+        <img src="./assets/images/sample-hero-image.jpg" alt="Marvel Hero Image" title="Marvel Hero Image" class="heroimage" id="heroImage" />
     </header>
 
     <main>
@@ -38,27 +33,27 @@
             <h1>Choose A Theme: </h1>
             <div id="themeButton">
                 <div id="themeOption">
-                    <button class="button" style="height:400px;width:225px" id="ogAvengersBtn"> 
+                    <button class="button" style="height:400px;width:225px" id="ogAvengersBtn" value="OG Avengers"> 
                         <p>OG Avengers</p>
-                        <img src="./assets/images/avengersCrop.jpg"></img>
+                        <img src="./assets/images/avengersCrop.jpg" alt="OG Avengers Button" title="OG Avengers"></img>
                     </button>
                 </div>
                 <div id="themeOption">
                     <button class="button" style="height:400px;width:225px" id="villainsBtn"> 
                         <p >Villians</p>
-                        <img src="./assets/images/villianCrop.jpg"></img>
+                        <img src="./assets/images/villianCrop.jpg" alt="Villians Button" title="Villians"></img>
                     </button>
                 </div>
                 <div id="themeOption">
                     <button class="button" style="height:400px;width:225px" id="sheroesBtn"> 
                         <p >Sheroes</p>
-                        <img src="./assets/images/sheroesCrop.jpg" width="200" height="290"></img>
+                        <img src="./assets/images/sheroesCrop.jpg" width="200" height="290" alt="Sheroes Button" title="Sheroes"></img>
                     </button>
                 </div>
                 <div id="themeOption">
                     <button class="button" style="height:400px;width:225px" id="heroesBtn"> 
                         <p >Heroes</p>
-                        <img src="./assets/images/hereosCrop.jpg" width="200" height="290"></img>
+                        <img src="./assets/images/hereosCrop.jpg" width="200" height="290" alt="Heroes Button" title="Heroes"></img>
                     </button>
                 </div>
             </section>
@@ -93,8 +88,6 @@
     <footer>© Copyright 2023</footer>
 
     <script src="./assets/js/homepage.js"></script>
-
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 
 </body>
 
