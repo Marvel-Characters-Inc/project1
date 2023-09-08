@@ -22,13 +22,13 @@ var sheroesTitle = document.getElementById("sheroesTitle");
 var heroesTitle = document.getElementById("heroesTitle");
 
 //theme variables
-var theme1 = "OG Avengers";
-var theme2 = "Villains";
-var theme3 = "Sheroes";
-var theme4 = "Heroes";
+var theme1 = "ogavengers";
+var theme2 = "villains";
+var theme3 = "sheroes";
+var theme4 = "heroes";
 
 //event listener for theme = Og Avengers button
-ogAvengersBtn.addEventListener("click", function () {
+ogAvengersBtn.addEventListener("click", function (event) {
   ogAvengersContainer.classList.remove("hide");
   ogAvengersTitle.classList.remove("hide");
   villainsContainer.classList.add("hide");
@@ -37,6 +37,9 @@ ogAvengersBtn.addEventListener("click", function () {
   sheroesTitle.classList.add("hide");
   heroesContainer.classList.add("hide");
   heroesTitle.classList.add("hide");
+
+    // Prevent the default behavior
+    event.preventDefault();
   
   //store Theme value in localstorage
   localStorage.setItem("theme", theme1);
@@ -55,16 +58,13 @@ ogAvengersBtn.addEventListener("click", function () {
       fetch(apiSuperHero659).then(function (response) {
         if (response.ok) {
           response.json().then(function (data) {
-
             console.log(data);
             
             var characterData = $('<div>');
             characterData.addClass('col s3');
             
             var charID = data.id;
-            
             var charName = $("<h4>").text(data.name);
-
             var charImage = $('<img id="charImg1">').attr('src', data.image.url).attr('title', 'Learn more about Thor').attr('alt', 'Thor Image');
             
             characterData.append(charName).append(charImage);
@@ -78,7 +78,7 @@ ogAvengersBtn.addEventListener("click", function () {
       //function that appends the character id value to the interior page URL
       function characterPageLink () {
         //link to interior page and append character id value in URL
-        window.location.href = "https://marvel-characters-inc.github.io/project1/interior.html?id=" + charID;
+        window.location.href = "interior2.html?id=" + charID + "&theme=" + theme1;
 
         //store character data to local storage
         localStorage.setItem("characterID", charID);
@@ -110,7 +110,7 @@ ogAvengersBtn.addEventListener("click", function () {
 
       //function that appends the character id value to the interior page URL
       function characterPageLink () {
-        window.location.href = "https://marvel-characters-inc.github.io/project1/interior.html?id=" + charID;
+        window.location.href = "interior2.html?id=" + charID + "&theme=" + theme1;
 
         //store data to local storage
         localStorage.setItem("characterID", charID);
@@ -140,7 +140,7 @@ ogAvengersBtn.addEventListener("click", function () {
 
       //function that appends the character id value to the interior page URL
       function characterPageLink () {
-        window.location.href = "https://marvel-characters-inc.github.io/project1/interior.html?id=" + charID;
+        window.location.href = "interior2.html?id=" + charID + "&theme=" + theme1;
 
         //store data to local storage
         localStorage.setItem("characterID", charID);
@@ -169,7 +169,7 @@ ogAvengersBtn.addEventListener("click", function () {
 
       //function that appends the character id value to the interior page URL
       function characterPageLink () {
-        window.location.href = "https://marvel-characters-inc.github.io/project1/interior.html?id=" + charID;
+        window.location.href = "interior2.html?id=" + charID + "&theme=" + theme1;
 
         //store data to local storage
         localStorage.setItem("characterID", charID);
@@ -225,7 +225,7 @@ ogAvengersBtn.addEventListener("click", function () {
 
     //function that appends the character id value to the interior page URL
     function characterPageLink () {
-        window.location.href = "https://marvel-characters-inc.github.io/project1/interior.html?id=" + charID;
+      window.location.href = "interior2.html?id=" + charID + "&theme=" + theme2;
 
         //store data to local storage
         localStorage.setItem("characterID", charID);
@@ -255,7 +255,7 @@ ogAvengersBtn.addEventListener("click", function () {
 
     //function that appends the character id value to the interior page URL
     function characterPageLink () {
-        window.location.href = "https://marvel-characters-inc.github.io/project1/interior.html?id=" + charID;
+      window.location.href = "interior2.html?id=" + charID + "&theme=" + theme2;
 
         //store data to local storage
         localStorage.setItem("characterID", charID);
@@ -284,7 +284,7 @@ ogAvengersBtn.addEventListener("click", function () {
 
     //function that appends the character id value to the interior page URL
     function characterPageLink () {
-        window.location.href = "https://marvel-characters-inc.github.io/project1/interior.html?id=" + charID;
+      window.location.href = "interior2.html?id=" + charID + "&theme=" + theme2;
 
         //store data to local storage
         localStorage.setItem("characterID", charID);
@@ -312,7 +312,7 @@ ogAvengersBtn.addEventListener("click", function () {
 
     //function that appends the character id value to the interior page URL
     function characterPageLink () {
-        window.location.href = "https://marvel-characters-inc.github.io/project1/interior.html?id=" + charID;
+      window.location.href = "interior2.html?id=" + charID + "&theme=" + theme2;
 
         //store data to local storage
         localStorage.setItem("characterID", charID);
@@ -366,7 +366,7 @@ sheroesBtn.addEventListener("click", function () {
     var characterImageBtn = document.getElementById("charImg3a");
     characterImageBtn.addEventListener("click", characterPageLink);
     function characterPageLink () {
-    window.location.href = "https://marvel-characters-inc.github.io/project1/interior.html?id=" + charID;
+      window.location.href = "interior2.html?id=" + charID + "&theme=" + theme3;
 
     //store data to local storage
     localStorage.setItem("characterID", charID);
@@ -396,7 +396,7 @@ sheroesBtn.addEventListener("click", function () {
 
     //function that appends the character id value to the interior page URL
     function characterPageLink () {
-    window.location.href = "https://marvel-characters-inc.github.io/project1/interior.html?id=" + charID;
+      window.location.href = "interior2.html?id=" + charID + "&theme=" + theme3;
 
     //store data to local storage
     localStorage.setItem("characterID", charID);
@@ -426,7 +426,7 @@ sheroesBtn.addEventListener("click", function () {
 
     //function that appends the character id value to the interior page URL
     function characterPageLink () {
-    window.location.href = "https://marvel-characters-inc.github.io/project1/interior.html?id=" + charID;
+      window.location.href = "interior2.html?id=" + charID + "&theme=" + theme3;
 
     //store data to local storage
     localStorage.setItem("characterID", charID);
@@ -456,7 +456,7 @@ sheroesBtn.addEventListener("click", function () {
 
     //function that appends the character id value to the interior page URL
     function characterPageLink () {
-    window.location.href = "https://marvel-characters-inc.github.io/project1/interior.html?id=" + charID;
+    window.location.href = "interior2.html?id=" + charID + "&theme=" + theme3;
 
     //store data to local storage
     localStorage.setItem("characterID", charID);
@@ -511,7 +511,7 @@ heroesBtn.addEventListener("click", function () {
 
      //function that appends the character id value to the interior page URL
      function characterPageLink () {
-      window.location.href = "https://marvel-characters-inc.github.io/project1/interior.html?id=" + charID;
+      window.location.href = "interior2.html?id=" + charID + "&theme=" + theme4;
 
       //store data to local storage
       localStorage.setItem("characterID", charID);
@@ -541,7 +541,7 @@ heroesBtn.addEventListener("click", function () {
 
      //function that appends the character id value to the interior page URL
      function characterPageLink () {
-      window.location.href = "https://marvel-characters-inc.github.io/project1/interior.html?id=" + charID;
+      window.location.href = "interior2.html?id=" + charID + "&theme=" + theme4;
 
       //store data to local storage
       localStorage.setItem("characterID", charID);
@@ -571,7 +571,7 @@ heroesBtn.addEventListener("click", function () {
 
      //function that appends the character id value to the interior page URL
      function characterPageLink () {
-      window.location.href = "https://marvel-characters-inc.github.io/project1/interior.html?id=" + charID;
+      window.location.href = "interior2.html?id=" + charID + "&theme=" + theme4;
 
       //store data to local storage
       localStorage.setItem("characterID", charID);
@@ -600,7 +600,7 @@ heroesBtn.addEventListener("click", function () {
      
      //function that appends the character id value to the interior page URL
      function characterPageLink () {
-    window.location.href = "https://marvel-characters-inc.github.io/project1/interior.html?id=" + charID;
+    window.location.href = "interior2.html?id=" + charID + "&theme=" + theme4;
 
     //store data to local storage
     localStorage.setItem("characterID", charID);
@@ -616,4 +616,5 @@ heroesBtn.addEventListener("click", function () {
 //event listener for homepage header banner
 heroImage.addEventListener("click", function () {
   location.reload();
+  localStorage.clear();
 });
