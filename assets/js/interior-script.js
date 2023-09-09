@@ -40,13 +40,12 @@ var displayCharInfo = function (hero) {
   var heroName = hero.name
   var heroRealName = hero.biography['full-name']
   var heroOriginCity = hero.work.base
-  var characterImage = hero.image.url
 
 
   superHero.textContent = heroName
   realName.textContent = heroRealName
   originCity.textContent = heroOriginCity
-  heroImage.innerHTML = characterImage
+  heroImage.setAttribute("src",hero.image.url)
 
 };
 
