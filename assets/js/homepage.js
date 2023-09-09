@@ -347,21 +347,21 @@ sheroesBtn.addEventListener("click", function () {
   localStorage.setItem("theme", theme3);
 
   //Function to pull Sheroes Characters
-  //Theme 3 (Sheroes) array should contain characters/id = Black Widow (107), Scarlet Witch (579), Storm (638), Jean Grey (356)
+  //Theme 3 (Sheroes) array should contain characters/id = Invisible Woman (344), Scarlet Witch (579), Storm (638), Catwoman (165)
 
   function getSheroes() {
     
-    var character1ID = "107";
+    var character1ID = "344";
     var character2ID = "579";
     var character3ID = "638";
-    var character4ID = "356";
+    var character4ID = "165";
 
      // clears duplicate row for Sheroes
      $('#sheroesContainer').empty()
 
-    //Sheroes character 1 Black Widow (ID: 107)
-    var apiSuperHero107 = baseURL + APIKey + "/" + character1ID;
-    fetch(apiSuperHero107).then(function (response) {
+    //Sheroes character 1 Invisible Woman (ID: 344)
+    var apiSuperHero344 = baseURL + APIKey + "/" + character1ID;
+    fetch(apiSuperHero344).then(function (response) {
       if (response.ok) {
         response.json().then(function (data) {
           console.log(data);
@@ -369,7 +369,7 @@ sheroesBtn.addEventListener("click", function () {
     characterData.addClass('col s3');
     var charID = data.id
     var charName = $("<h4>").text(data.name);
-    var charImage = $('<img id="charImg3a">').attr('src', data.image.url).attr('title', 'Learn more about Black Widow').attr('alt', 'Black Widow Image');
+    var charImage = $('<img id="charImg3a">').attr('src', data.image.url).attr('title', 'Learn more about Invisible Woman').attr('alt', 'Invisible Woman Image');
     characterData.append(charName).append(charImage);
     $('#sheroesContainer').append(characterData);
 
@@ -447,9 +447,9 @@ sheroesBtn.addEventListener("click", function () {
       }
     });
 
-    //Sheroes character 4 Jean Grey (ID: 356)
-    var apiSuperHero356 = baseURL + APIKey + "/" + character4ID;
-    fetch(apiSuperHero356).then(function (response) {
+    //Sheroes character 4 Catwoman (ID: 165)
+    var apiSuperHero165 = baseURL + APIKey + "/" + character4ID;
+    fetch(apiSuperHero165).then(function (response) {
       if (response.ok) {
         response.json().then(function (data) {
           console.log(data);
@@ -457,7 +457,7 @@ sheroesBtn.addEventListener("click", function () {
     characterData.addClass('col s3');
     var charID = data.id
     var charName = $("<h4>").text(data.name);
-    var charImage = $('<img id="charImg3d">').attr('src', data.image.url).attr('title', 'Learn more about Jean Grey').attr('alt', 'Jean Grey Image');
+    var charImage = $('<img id="charImg3d">').attr('src', data.image.url).attr('title', 'Learn more about Catwoman').attr('alt', 'Catwoman Image');
     characterData.append(charName).append(charImage);
     $('#sheroesContainer').append(characterData);
 
