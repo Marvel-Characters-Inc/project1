@@ -32,7 +32,7 @@ The character-specific modal window will display the movie image, title, release
 
 **APIs Used:**
 * Super Hero API: https://superheroapi.com/index.html
-* TMDB API: https://developer.themoviedb.org/reference/intro/getting-started
+* OMDB API: http://www.omdbapi.com/?apikey=[yourkey]&
 
 **Images**
 * Homepage Hero Image: https://www.komar.de/en/photomurals-marvel-comic
