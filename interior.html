@@ -1,100 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">"
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@materializecss/materialize@2.0.2-alpha/dist/css/materialize.min.css">
+    <title>Character Information | Marvel Characters, Inc.</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@materializecss/materialize@2.0.2-alpha/dist/css/materialize.min.css">
+    <!-- Compiled and minified JavaScript -->
+    <script
+        src="https://cdn.jsdelivr.net/npm/@materializecss/materialize@2.0.2-alpha/dist/js/materialize.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Marvel:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./assets/css/homepage.css">
     <link rel="stylesheet" href="./assets/css/interior-style.css" />
-
-    <title>Character Information</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
-
 <body>
     <header>
-        <h1 class="title">Marvel Characters, Inc.</h1>
+        <!-- hero image -->
+        <img src="./assets/images/sample-hero-image.jpg" alt="Marvel Hero Image" title="Marvel Hero Image"
+            class="heroimage" id="heroImage" />
     </header>
-   <!-- Character Info -->
-    <section class="first">
+    <!-- Character Info -->
+    <section class="first" id="characterInfoBox">
         <h2 class="character-info">Character Information</h2>
-        <div class="info-card row">
-            <img id="hero-image" class="character-pic col s5" src="./assets/images/Portrait.png"></img>
-            <div class="hero-info col s7">
-                <h3 id="hero-name">Hero Name</h3>
-                <p id="real-name">Real Name</p>
-                <p id="city">City</p>
-            </div>
-        </div> 
+        <!-- insert character image, name, full name, and place of birth here -->
     </section>
-       
     <section class="second">
-        <h2 class="character-movies">Movies Character Appears In: </h2>
-        <div class="row" id="movie-results">
-            <!-- First Movie -->
-            <card class="movies col s4">
-                <img class="movie-image" src="./assets/images/Portrait.png">
-                <h6>Movie Title</h6>
-                <a class="waves-effect waves-light #b71c1c red darken-4 btn modal-trigger" href="#modal1">Read More...</a>
-                <div id="modal1" class="modal">
-                    <div class="modal-content">
-                        <h4 class="movie-title-one">Movie Title</h4>
-                        <img class ="char-img-one">
-                        <p class="release-date-one">Release Date</p>
-                        <p class ="synopsis-one">Synopsis</p>
-                    </div>
-                    <div class="modal-footer">
-                     <a href="#!" class="modal-close waves-effect btn-flat">Close</a>
-                    </div>
-                </div>
-            </card>
-            <!-- Second Movie -->
-            <card class="movies col s4">
-                <img class="movie-image" src="./assets/images/Portrait.png">
-                <h6>Movie Title</h6>
-                <a class="waves-effect waves-light #b71c1c red darken-4 btn modal-trigger" href="#modal1">Read More...</a>
-                <div id="modal1" class="modal">
-                    <div class="modal-content">
-                        <h4 class="movie-title-two">Movie Title</h4>
-                        <img class ="char-img-two">
-                        <p class="release-date-two">Release Date</p>
-                        <p class ="synopsis-two">Synopsis</p>
-                    </div>
-                    <div class="modal-footer">
-                     <a href="#!" class="modal-close waves-effect btn-flat">Close</a>
-                    </div>
-                </div>
-            </card>
-            <!-- Third Movie -->
-            <card class="movies col s4">
-                <img class="movie-image" src="./assets/images/Portrait.png">
-                <h6>Movie Title</h6>
-                <a class="waves-effect waves-light #b71c1c red darken-4 btn modal-trigger" href="#modal1">Read More...</a>
-                <div id="modal1" class="modal">
-                    <div class="modal-content">
-                        <h4 class="movie-title-three">Movie Title</h4>
-                        <img class ="char-img-three">
-                        <p class="release-date-three">Release Date</p>
-                        <p class ="synopsis-three">Synopsis</p>
-                    </div>
-                    <div class="modal-footer">
-                     <a href="#!" class="modal-close waves-effect btn-flat">Close</a>
-                    </div>
-                </div>
-            </card>
-        </div>
-        <div class="diff-button">
-            <!-- back to first page -->
-            <a href = "#">
-                <button id="new-character-button">Select New Character</button>
-            </a>
-        </div>
+        <!-- Trigger/Open The Modal  -->
+        <button data-target="modal1" class="btn modal-trigger" id="myBtn" name="Learn More" value="Learn More">Learn More</button>
+        <button id="newCharacterButton" class="btn" name="Select New Character" value="Select New Character">Select New Character</button>
     </section>
-
-    <footer>
-        <p class="footer">We are professionals:]</p>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/@materializecss/materialize@2.0.2-alpha/dist/js/materialize.min.js"></script>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <div id="modalContent" class="modal-content">
+            <span class="close">&times;</span>
+            <!-- insert Modal content here -->
+        </div>
+    </div>
+    <footer>© Copyright 2023</footer>
     <script src="./assets/js/interior-script.js"></script>
 </body>
-
 </html>
