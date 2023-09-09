@@ -18,10 +18,10 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-function getApi() {
-  var requestUrl = 'https://superheroapi.com/api.php/3008242709313318/346';
-  var chosenCharacter = ''
-  var apiUrl = 'https://superheroapi.com/api.php/3008242709313318/' + chosenCharacter;
+function getHeroApi() {
+  var chosenCharacter = '346'
+  var heroAPIKey = '9970399733032938'
+  var requestUrl = `https://superheroapi.com/api.php/${heroAPIKey}/${chosenCharacter}`;
   fetch(requestUrl)
     .then(function (response) {
       if (response.ok) {
@@ -84,6 +84,6 @@ var displayCharMovieThree = function (movie) {
   movieThreeTitle.textContent = movThreeTitle
 }
 
-getApi();
+getHeroApi();
 
 getMovieApi();
