@@ -1,10 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('.modal');
-    var instances = M.Modal.init(elems, {
-      // specify options here
-    });
-  });
-          //check URL parameter and get id & theme value
+//check URL parameter and get id & theme value
 const searchParams = new URLSearchParams(window.location.search);
 // console.log(searchParams.has('id')); // true
 console.log(searchParams.get('id')); // id value
