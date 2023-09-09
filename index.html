@@ -1,93 +1,74 @@
 <!DOCTYPE html>
 <html lang="en-US">
-
 <head>
     <meta charset="UTF-8">
     <title>Marvel Characters, Inc.</title>
     <link rel="stylesheet" type="text/css" href="./assets/css/homepage.css">
-
- 
+<!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@materializecss/materialize@2.0.2-alpha/dist/css/materialize.min.css">
-
-    <!-- Compiled and minified JavaScript -->
+<!-- Compiled and minified JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/@materializecss/materialize@2.0.2-alpha/dist/js/materialize.min.js"></script>
-            
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Marvel:wght@400;700&display=swap" rel="stylesheet">
-
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
 </head>
+
 
 <body>
     <header>
         <!-- hero image -->
         <img src="./assets/images/sample-hero-image.jpg" alt="Marvel Hero Image" title="Marvel Hero Image" class="heroimage" id="heroImage" />
     </header>
-
     <main>
         <section class="hero-options">
             <h1>Choose A Theme: </h1>
             <div id="themeButton">
                 <div id="themeOption">
-                    <button class="button" style="height:400px;width:225px" id="ogAvengersBtn" value="OG Avengers"> 
+                    <button class="button" style="height:400px;width:225px" id="ogAvengersBtn" value="OG Avengers">
                         <p>OG Avengers</p>
                         <img src="./assets/images/avengersCrop.jpg" alt="OG Avengers Button" title="OG Avengers"></img>
                     </button>
                 </div>
                 <div id="themeOption">
-                    <button class="button" style="height:400px;width:225px" id="villainsBtn"> 
+                    <button class="button" style="height:400px;width:225px" id="villainsBtn">
                         <p >Villians</p>
                         <img src="./assets/images/villianCrop.jpg" alt="Villians Button" title="Villians"></img>
                     </button>
                 </div>
                 <div id="themeOption">
-                    <button class="button" style="height:400px;width:225px" id="sheroesBtn"> 
+                    <button class="button" style="height:400px;width:225px" id="sheroesBtn">
                         <p >Sheroes</p>
                         <img src="./assets/images/sheroesCrop.jpg" width="200" height="290" alt="Sheroes Button" title="Sheroes"></img>
                     </button>
                 </div>
                 <div id="themeOption">
-                    <button class="button" style="height:400px;width:225px" id="heroesBtn"> 
+                    <button class="button" style="height:400px;width:225px" id="heroesBtn">
                         <p >Heroes</p>
                         <img src="./assets/images/hereosCrop.jpg" width="200" height="290" alt="Heroes Button" title="Heroes"></img>
                     </button>
                 </div>
             </section>
-
         <section class="section" id="charactersContainer">
-
             <h3 id="ogAvengersTitle" class="hide">OG Avengers</h3>
             <h3 id="villainsTitle" class="hide">Villains</h3>
             <h3 id="sheroesTitle" class="hide">Sheroes</h3>
             <h3 id="heroesTitle" class="hide">Heroes</h3>
-
              <div class="row hide" id="ogAvengersContainer">
                 <!-- display OG Avengers characters data here -->
             </div>
-
-            <div class="row hide" id="villainsContainer">         
+            <div class="row hide" id="villainsContainer">
                <!-- display villain characters data here -->
             </div>
-
             <div class="row hide" id="sheroesContainer">
               <!-- display sheroes characters data here -->
             </div>
-
             <div class="row hide" id="heroesContainer">
               <!--   display heroes characters data here -->
             </div>
-
         </section>
-
     </main>
-
     <footer>© Copyright 2023</footer>
-
     <script src="./assets/js/homepage.js"></script>
-
 </body>
-
 </html>
