@@ -4,15 +4,14 @@ For our first project, we developed a SuperHero web app where you can view and l
 ### Homepage
 When the homepage loads, the banner image and the theme icons will be displayed on the screen. Available themes are: OG Avengers, Villains, Sheroes, Heroes. When the user selects a theme, the page will diplay 4 characters tagged with that theme. When the user clicks on the character, the interior page will display. The destination URL for interior page is appended with the specific character ID. We used the SuperHero API to pull the character name, character id, and character image using Javascript. 
 
-### Interior Page
-*NOTE: this information may change/TBD* 
+### Interior Page 
 
-The interior page will display data based on the URL parameter which contains the character ID. Character-specific information such as hero name, real name, and city of origin/organization will display on top of the page. A list of movies or comic books where the character appeared in will display at the bottom part of the page. The "read more" button for each movie or comic card will pop open a modal window with more information. We also used the SuperHero API here to pull the character name, image, and place of birth. Then we used the TMDB API or Comic API to pull the movies or comic books related to the character selected.
+The interior page will display data based on the URL parameter which contains the character ID. Character-specific information such as hero name, real name, and city of origin/organization will display on top of the page.
+The "Learn More" button will be at the bottom of the chracter image. By clicking the button it will pop open a modal window with more information. We also used the SuperHero API here to pull the character name, image, and place of birth. Then we used the OMDB API to pull the movie information related to the character selected.
 
 ### Modal Window
-*NOTE: this information may change/TBD* 
 
-The character-specific modal window will display the movie image, title, release date, and synopsis. We used the TMDB API or Comic API to pull the movies matching the character selected. 
+The character-specific modal window will display the movie image, title, release date, and synopsis. We used the OMDB API to pull the movie matching the character selected. 
 
 ## References / Resources
 **CSS Framework:**
@@ -32,7 +31,7 @@ The character-specific modal window will display the movie image, title, release
 
 **APIs Used:**
 * Super Hero API: https://superheroapi.com/index.html
-* TMDB API: https://developer.themoviedb.org/reference/intro/getting-started
+* OMDB API: http://www.omdbapi.com/?apikey=[yourkey]&
 
 **Images**
 * Homepage Hero Image: https://www.komar.de/en/photomurals-marvel-comic
