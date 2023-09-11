@@ -1,5 +1,5 @@
 * {
-  font-family: ‘Marvel’, sans-serif;
+  font-family: 'Marvel', sans-serif;
   line-height: 24px;
   font-size: 30px;
 }
@@ -7,7 +7,7 @@ body {
   background-color: #EC1D24;
 }
 h1 {
-  font-family: ‘Marvel’, sans-serif;
+  font-family: 'Marvel', sans-serif;
   color: #FFFFFF;
   line-height: 3em;
   display: flex;
@@ -136,7 +136,7 @@ cursor: pointer;
 /* Viewports between 320px and 480px wide */
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
 * {
-  font-family: ‘Lucida Sans’, ‘Lucida Sans Regular’, ‘Lucida Grande’, ‘Lucida Sans Unicode’, Geneva, Verdana, sans-serif;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-size: 15px;
   line-height: 24px;
 }
