@@ -50,7 +50,7 @@ function getMovie(data) {
     var movieResults = document.getElementById("movieResults");
     var APIKey = "c4af5a76";
     var name = searchParams.get('name');
-    var baseURL = "http://www.omdbapi.com/?t=";
+    var baseURL = "https://www.omdbapi.com/?t=";
     var apiOmdb = baseURL + name + "&apikey=" + APIKey;
     //var apiOmdb = "http://www.omdbapi.com/?t=Hulk&r=xml&apikey=c11badfe"
     //console.log(apiOmdb);
