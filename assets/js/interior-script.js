@@ -48,7 +48,7 @@ getMovie();
 //function to get data from OMDB API and display in Modal
 function getMovie(data) {
     var movieResults = document.getElementById("movieResults");
-    var APIKey = "c11badfe";
+    var APIKey = "c4af5a76";
     var name = searchParams.get('name');
     var baseURL = "http://www.omdbapi.com/?t=";
     var apiOmdb = baseURL + name + "&apikey=" + APIKey;

@@ -30,12 +30,12 @@ The character-specific modal window will display the movie image, title, release
 * Google Fonts: https://fonts.google.com/
 
 **APIs Used:**
-* Super Hero API: https://superheroapi.com/index.html
-* OMDB API: http://www.omdbapi.com/?apikey=[yourkey]&
+* Super Hero API: https://superheroapi.com
+* OMDB API: http://www.omdbapi.com
 
 **Images**
 * Homepage Hero Image: https://www.komar.de/en/photomurals-marvel-comic
-* Character Images: TBD
+* Character Images were pulled from both Super Hero API and OMDB API
 
 ## URLs submitted
 
