@@ -339,13 +339,13 @@ heroesTitle.classList.add("hide");
 localStorage.setItem("theme", theme3);
 
 //Function to pull Sheroes Characters
-//Theme 3 (Sheroes) array should contain characters/id = She Hulk (589), Spider-Woman (623), Captain Marvel (157), Catwoman (165)
+//Theme 3 (Sheroes) array should contain characters/id = She Hulk (589), Spider-Woman (623), Captain Marvel (157), Black Widow (107)
 
 function getSheroes() {
 var character1ID = "589";
 var character2ID = "623";
 var character3ID = "157";
-var character4ID = "165";
+var character4ID = "107";
 
 // clears duplicate row for Sheroes
 $('#sheroesContainer').empty()
@@ -438,7 +438,7 @@ localStorage.setItem("characterName", data.name);
 }
 });
 
-//Sheroes character 4 Catwoman (ID: 165)
+//Sheroes character 4 Black Widow (ID: 107)
 var apiSuperHero165 = baseURL + APIKey + "/" + character4ID;
 fetch(apiSuperHero165).then(function (response) {
 if (response.ok) {
